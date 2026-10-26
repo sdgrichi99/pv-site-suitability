@@ -2,7 +2,7 @@
 
     {%- set default_schema = target.schema -%}
     
-    {%- if target.name in ['prd', 'tst'] -%}
+    {%- if target.name in ['prod', 'tst'] -%}
         {%- if custom_schema_name is none -%}
             {{ default_schema }}
         {%- else -%}
