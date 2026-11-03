@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: final_model
+    description: "Modello di prova con 100.000 clienti generati, usato per testare la materializzazione diretta (direct_create)."
+    columns:
+      - name: customer_id
+        description: "Identificativo del cliente."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: "Nome del cliente."
+      - name: email
+        description: "Email del cliente."
+      - name: created_at
+        description: "Data e ora di generazione del record."

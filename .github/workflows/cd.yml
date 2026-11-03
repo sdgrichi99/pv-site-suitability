@@ -1,0 +1,68 @@
+name: dbt CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  # Avvio manuale: utile per il primo deploy e per i test senza dover fare un merge
+  workflow_dispatch:
+
+concurrency:
+  group: cd-main
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy su Prefect e caricamento manifest
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      # Prefect Cloud
+      PREFECT_API_KEY: ${{ secrets.PREFECT_API_KEY }}
+      PREFECT_API_URL: ${{ secrets.PREFECT_API_URL }}
+      # Valori letti da prefect.yaml e inseriti nelle variabili del job
+      NEON_URL_PRD: ${{ secrets.NEON_URL_PRD }}
+      TIGRIS_BUCKET_PRD: ${{ secrets.TIGRIS_BUCKET_PRD }}
+      AWS_ACCESS_KEY_ID_PRD: ${{ secrets.AWS_ACCESS_KEY_ID_PRD }}
+      AWS_SECRET_ACCESS_KEY_PRD: ${{ secrets.AWS_SECRET_ACCESS_KEY_PRD }}
+      AWS_ENDPOINT_URL_S3_PRD: ${{ secrets.AWS_ENDPOINT_URL_S3_PRD }}
+      NEON_URL_DEV: ${{ secrets.NEON_URL_DEV }}
+      TIGRIS_BUCKET_DEV: ${{ secrets.TIGRIS_BUCKET_DEV }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      # dbt
+      DBT_TARGET: prd
+      PYTHONPATH: ${{ github.workspace }}
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Crea o aggiorna i deployment ducklake-pipeline-prd e ducklake-pipeline-dev
+      - name: Deploy Prefect deployments
+        run: prefect deploy --all
+
+      # Il manifest rappresenta il codice di produzione appena pubblicato
+      - name: Generate dbt manifest
+        run: dbt parse --target prd --profiles-dir .
+
+      - name: Upload manifest to Tigris
+        run: python macros/put_manifest.py

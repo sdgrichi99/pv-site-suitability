@@ -1,0 +1,63 @@
+pipeline_on_databricks:
+  target: "{{ env_var('DBT_TARGET', 'dev') }}"
+  outputs:
+    dev:
+      type: databricks
+      host: "{{ env_var('DATABRICKS_HOST') | replace('https://', '') | replace('/', '') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
+      auth_type: oauth
+      catalog: workspace
+      schema: "{{ env_var('DBT_PR_SCHEMA', 'dev_' ~ env_var('USERNAME', 'default_user')) }}"
+      threads: 4
+
+    prd:
+      type: databricks
+      host: "{{ env_var('DATABRICKS_HOST') | replace('https://', '') | replace('/', '') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
+      auth_type: oauth
+      token: "{{ env_var('DBT_ACCESS_TOKEN')}}"
+      catalog: workspace_prod
+      schema: main
+      threads: 4
+
+duck_db_trial:
+  target: "{{ env_var('DBT_TARGET', 'dev') }}"
+  outputs:
+    dev:
+      type: duckdb
+      path: ":memory:"
+      extensions:
+        - httpfs
+        - postgres
+        - ducklake
+      secrets:
+        - type: s3
+          key_id: "{{ env_var('AWS_ACCESS_KEY_ID') }}"
+          secret: "{{ env_var('AWS_SECRET_ACCESS_KEY') }}"
+          endpoint: "{{ env_var('AWS_ENDPOINT_URL_S3') | replace('https://', '') | replace('http://', '') }}"
+          url_style: path
+          use_ssl: true
+          region: "{{ env_var('AWS_REGION', 'auto') }}"
+      plugins:
+        - module: ducklake_plugin
+          config:
+            env_suffix: DEV
+    prd:
+      type: duckdb
+      path: ":memory:"
+      extensions:
+        - httpfs
+        - postgres
+        - ducklake
+      secrets:
+        - type: s3
+          key_id: "{{ env_var('AWS_ACCESS_KEY_ID_PRD') }}"
+          secret: "{{ env_var('AWS_SECRET_ACCESS_KEY_PRD') }}"
+          endpoint: "{{ env_var('AWS_ENDPOINT_URL_S3_PRD') | replace('https://', '') | replace('http://', '') }}"
+          url_style: path
+          use_ssl: true
+          region: "{{ env_var('AWS_REGION_PRD', 'auto') }}"
+      plugins:
+        - module: ducklake_plugin
+          config:
+            env_suffix: PRD

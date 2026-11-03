@@ -1,0 +1,154 @@
+name: dbt CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Controlli regole PR
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Il branch sorgente deve essere "dev", "dev-*" oppure "feature/*"
+      - name: Validate source branch name
+        env:
+          SRC_BRANCH: ${{ github.head_ref }}
+        run: |
+          echo "PR da '$SRC_BRANCH' verso 'main'"
+          if [[ "$SRC_BRANCH" != "dev" && ! "$SRC_BRANCH" =~ ^dev- && ! "$SRC_BRANCH" =~ ^feature/ ]]; then
+            echo "::error::In 'main' può entrare solo il branch 'dev', un branch 'dev-*' o un branch 'feature/*'"
+            exit 1
+          fi
+
+      # Il branch sorgente può essere avanti rispetto a main, mai indietro
+      - name: Check branch is not behind main
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          SRC_BRANCH: ${{ github.head_ref }}
+        run: |
+          git fetch origin main
+          BEHIND=$(git rev-list --count "$HEAD_SHA..origin/main")
+          echo "Commit di main non presenti in '$SRC_BRANCH': $BEHIND"
+          if [ "$BEHIND" -gt 0 ]; then
+            echo "::error::Il branch '$SRC_BRANCH' è indietro di $BEHIND commit rispetto a 'main'. Unire 'main' in '$SRC_BRANCH' e ripetere."
+            exit 1
+          fi
+
+      # Ogni modello sql deve avere il file yml con lo stesso nome nella stessa cartella
+      - name: Check YML files for SQL models
+        run: |
+          MISSING_YML=0
+          while IFS= read -r sql_file; do
+            base_path="${sql_file%.sql}"
+            if [[ ! -f "${base_path}.yml" ]]; then
+              echo "::error file=${sql_file}::il modello non possiede il rispettivo file yml (${base_path}.yml)"
+              MISSING_YML=1
+            fi
+          done < <(find models -type f -name '*.sql')
+
+          if [[ $MISSING_YML -eq 1 ]]; then
+            echo "::error::uno o più file yml risultano mancanti, arresto della pipeline"
+            exit 1
+          fi
+          echo "ok: tutti i modelli sql hanno il rispettivo file yml"
+
+  dbt-ci-build:
+    name: dbt build su ambiente temporaneo
+    needs: checks
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      # Valori di base del branch dev: lo script crea le risorse temporanee
+      # e imposta NEON_URL_DEV e TIGRIS_BUCKET_DEV per gli step successivi.
+      CI_NEON_BASE_URL: ${{ secrets.NEON_URL_DEV }}
+      CI_TIGRIS_BASE: ${{ secrets.TIGRIS_BUCKET_DEV }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+      DBT_TARGET: dev
+      PYTHONPATH: ${{ github.workspace }}
+      PR_NUM: ${{ github.event.pull_request.number }}
+      RUN_TAG: ${{ github.run_id }}_${{ github.run_attempt }}
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          command -v psql >/dev/null || (sudo apt-get update -y && sudo apt-get install -y postgresql-client)
+
+      - name: Create temporary Neon database and Tigris prefix
+        run: python scripts/ci_resources.py create --pr "$PR_NUM" --run "$RUN_TAG"
+
+      - name: dbt build
+        run: dbt build --target dev --profiles-dir . --fail-fast
+
+      # Pulizia sempre, anche se il build fallisce o il run viene annullato
+      - name: Drop temporary resources
+        if: always()
+        run: |
+          python scripts/ci_resources.py drop --pr "$PR_NUM" --run "$RUN_TAG" \
+            || echo "::warning::Pulizia delle risorse temporanee non riuscita per il run ${RUN_TAG}"
+
+  cleanup-temp-resources:
+    name: Pulizia risorse temporanee alla chiusura della PR
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      CI_NEON_BASE_URL: ${{ secrets.NEON_URL_DEV }}
+      CI_TIGRIS_BASE: ${{ secrets.TIGRIS_BUCKET_DEV }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+      PR_NUM: ${{ github.event.pull_request.number }}
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install boto3
+          command -v psql >/dev/null || (sudo apt-get update -y && sudo apt-get install -y postgresql-client)
+
+      - name: Drop all temporary resources of this PR
+        run: python scripts/ci_resources.py drop --pr "$PR_NUM"
