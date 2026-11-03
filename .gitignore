@@ -7,3 +7,4 @@ email_test.py
 duckdb.exe
 graph.ipynb
 data_refresh.py
+manifest.json
