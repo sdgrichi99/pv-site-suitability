@@ -3,4 +3,7 @@ target/
 dbt_packages/
 logs/
 .env
-profiles.yml
+email_test.py
+duckdb.exe
+graph.ipynb
+data_refresh.py
