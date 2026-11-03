@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customers_brz
+    description: "Clienti grezzi (dati di prova), nessuna trasformazione."
+    columns:
+      - name: customer_id
+        description: "Identificativo del cliente."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: "Nome del cliente."
+      - name: last_name
+        description: "Cognome del cliente."
+      - name: email
+        description: "Email del cliente."
+      - name: created_at
+        description: "Data e ora di creazione del record."

@@ -1,3 +1,5 @@
+{{ config(direct_create=true) }}
+
 select
     c.customer_id,
     c.first_name || ' ' || c.last_name as full_name,

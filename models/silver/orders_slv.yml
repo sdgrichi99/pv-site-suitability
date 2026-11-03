@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: orders_slv
+    description: "Ordini non cancellati. Modello incrementale con strategia delete+insert su order_id."
+    columns:
+      - name: order_id
+        description: "Identificativo dell'ordine."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Cliente che ha effettuato l'ordine."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('customers_slv')
+                field: customer_id
+      - name: order_date
+        description: "Data dell'ordine."
+      - name: amount
+        description: "Importo dell'ordine."
+      - name: status
+        description: "Stato dell'ordine, in maiuscolo."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['COMPLETED']
+      - name: _loaded_at
+        description: "Data e ora di caricamento della riga in bronze."

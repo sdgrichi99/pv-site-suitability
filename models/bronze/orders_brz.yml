@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: orders_brz
+    description: "Ordini grezzi (dati di prova). La variabile orders_test_phase simula un secondo caricamento."
+    columns:
+      - name: order_id
+        description: "Identificativo dell'ordine."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Cliente che ha effettuato l'ordine."
+        data_tests:
+          - not_null
+      - name: order_date
+        description: "Data dell'ordine."
+      - name: amount
+        description: "Importo dell'ordine."
+      - name: status
+        description: "Stato dell'ordine."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'cancelled']
+      - name: _loaded_at
+        description: "Data e ora di caricamento della riga, usata come filtro incrementale in silver."

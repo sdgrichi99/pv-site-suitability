@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: customers_slv
+    description: "Clienti puliti: nome rinominato e email in minuscolo."
+    columns:
+      - name: customer_id
+        description: "Identificativo del cliente."
+        data_tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "Nome del cliente."
+      - name: last_name
+        description: "Cognome del cliente."
+      - name: email
+        description: "Email del cliente, in minuscolo."
