@@ -2,15 +2,11 @@
 
     {%- set default_schema = target.schema -%}
     
-    {%- if target.name in ['prod', 'tst'] -%}
-        {%- if custom_schema_name is none -%}
-            {{ default_schema }}
-        {%- else -%}
-            {{ custom_schema_name | trim }}
-        {%- endif -%}
-
-    {%- else -%}
+    {#- Manteniamo i nomi precisi degli schemi (bronze, silver, gold) sia in dev che in prod/tst -#}
+    {%- if custom_schema_name is none -%}
         {{ default_schema }}
+    {%- else -%}
+        {{ custom_schema_name | trim }}
     {%- endif -%}
 
 {%- endmacro %}
