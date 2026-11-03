@@ -1,0 +1,7 @@
+dbt-duckdb>=1.8.0
+duckdb>=1.1.0
+prefect>=3.0.0
+pendulum>=3.0.0
+requests>=2.31.0
+boto3
+python-dotenv
