@@ -29,8 +29,6 @@ def die(msg: str):
     sys.exit(1)
 
 
-# ---------------------------------------------------------------- Neon
-
 def neon_connection():
     raw = os.environ.get("CI_NEON_BASE_URL", "").strip()
     if not raw:
@@ -73,8 +71,6 @@ def psql(env, sql: str) -> str:
     return res.stdout.strip()
 
 
-# -------------------------------------------------------------- Tigris
-
 def tigris_base():
     raw = os.environ.get("CI_TIGRIS_BASE", "").strip()
     if not raw:
@@ -111,8 +107,6 @@ def delete_prefix(bucket: str, prefix: str):
             deleted += len(keys[i:i + 1000])
     print(f"[CI] Rimossi {deleted} oggetti da s3://{bucket}/{prefix}")
 
-
-# ------------------------------------------------------------- azioni
 
 def write_github_env(values: dict):
     path = os.environ.get("GITHUB_ENV")
