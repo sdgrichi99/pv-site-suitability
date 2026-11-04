@@ -2,23 +2,21 @@ import os
 import sys
 import subprocess
 from pathlib import Path
-
-# Risolve la root del progetto (la cartella genitore rispetto a /orchestrate)
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-# La root va aggiunta a sys.path PRIMA di importare 'orchestrate' e 'ducklake_plugin':
-# con Prefect Managed il progetto viene clonato in una cartella temporanea.
-sys.path.append(str(PROJECT_ROOT))
-
 import boto3
-from prefect import flow, task
+from prefect import flow, task, get_run_logger
 from orchestrate.utils.notifications import notify_on_failure
+
+# risolve la root del progetto (la cartella genitore rispetto a /orchestrate)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# la root va aggiunta a sys.path prima di importare 'orchestrate' e 'ducklake_plugin':
+# con prefect managed il progetto viene clonato in una cartella temporanea.
+sys.path.append(str(PROJECT_ROOT))
 
 VALID_TARGETS = ("dev", "prd")
 
 
 def get_target() -> str:
-    """Legge DBT_TARGET (default dev) e lo valida: ammessi solo 'dev' e 'prd'."""
+    # legge dbt_target (default dev) e lo valida: ammessi solo 'dev' e 'prd'.
     target = os.getenv("DBT_TARGET", "dev").strip().lower()
     if target not in VALID_TARGETS:
         raise ValueError(f"DBT_TARGET deve essere uno tra {VALID_TARGETS}, ricevuto '{target}'")
@@ -26,13 +24,9 @@ def get_target() -> str:
 
 
 def cleanup_tigris_tmp(target: str):
-    """Elimina tutti i prefissi e file temporanei __dbt_tmp da Tigris S3.
-
-    ATTENZIONE: in DuckLake le tabelle vive risiedono in cartelle '<tabella>__dbt_tmp/',
-    quindi questa funzione cancella dati veri. Non usarla finche' il layout dei percorsi
-    non e' stato risolto (vedi CLEANUP_TIGRIS_TMP in run_dbt).
-    """
-    suffix = target.upper()  # DEV | PRD, stesso suffisso usato da ducklake_plugin
+    # elimina tutti i prefissi e file temporanei __dbt_tmp da tigris s3.
+    # in ducklake le tabelle vive risiedono in cartelle '<tabella>__dbt_tmp/',
+    suffix = target.upper()  # dev | prd, stesso suffisso usato da ducklake_plugin
     raw_bucket = os.getenv(f"TIGRIS_BUCKET_{suffix}", "")
 
     bucket_name = raw_bucket.replace("s3://", "").strip("/")
@@ -40,7 +34,7 @@ def cleanup_tigris_tmp(target: str):
         print(f"[CLEANUP] TIGRIS_BUCKET_{suffix} non configurato, salto la pulizia.")
         return
 
-    # Stesse variabili usate da profiles.yml per il target corrispondente
+    # stesse variabili usate da profiles.yml per il target corrispondente
     if target == "prd":
         raw_endpoint = os.getenv("AWS_ENDPOINT_URL_S3_PRD", "")
         key_id = os.getenv("AWS_ACCESS_KEY_ID_PRD")
@@ -50,7 +44,7 @@ def cleanup_tigris_tmp(target: str):
         key_id = os.getenv("AWS_ACCESS_KEY_ID")
         secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-    # Normalizza l'endpoint per boto3
+    # normalizza l'endpoint per boto3
     if raw_endpoint and not raw_endpoint.startswith("http"):
         endpoint_url = f"https://{raw_endpoint}"
     else:
@@ -93,6 +87,7 @@ def cleanup_tigris_tmp(target: str):
 
 @task(name="Esegui Pipeline dbt")
 def run_dbt():
+    logger = get_run_logger()
     target = get_target()
     env = os.environ.copy()
     env["PYTHONPATH"] = str(PROJECT_ROOT)
@@ -100,25 +95,35 @@ def run_dbt():
 
     try:
         # build = run + test (+ seed/snapshot) in ordine di dipendenza
-        res = subprocess.run(
+        # popen con streaming riga per riga inoltra l'output al logger di prefect in tempo reale
+        process = subprocess.Popen(
             [
                 "dbt", "build",
                 "--target", target,
                 "--project-dir", str(PROJECT_ROOT),
                 "--profiles-dir", str(PROJECT_ROOT),
             ],
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
             text=True,
             env=env
         )
-        print(res.stdout)
-        if res.returncode != 0:
-            print(res.stderr, file=sys.stderr)
-            raise RuntimeError(f"dbt build fallito (target={target})")
+
+        for line in iter(process.stdout.readline, ""):
+            stripped = line.strip()
+            if stripped:
+                logger.info(stripped)
+
+        process.stdout.close()
+        return_code = process.wait()
+
+        if return_code != 0:
+            raise RuntimeError(f"dbt build fallito (target={target}) con exit code {return_code}")
+
     finally:
-        # Pulizia per nome DISATTIVATA di default: le tabelle DuckLake vive stanno in
+        # pulizia per nome disattivata di default: le tabelle ducklake vive stanno in
         # cartelle '<tabella>__dbt_tmp/' (il rename di dbt cambia solo il catalogo).
-        # Riattivare con CLEANUP_TIGRIS_TMP=true solo dopo aver risolto il layout dei percorsi.
+        # riattivare con cleanup_tigris_tmp=true solo dopo aver risolto il layout dei percorsi.
         if os.getenv("CLEANUP_TIGRIS_TMP", "false").strip().lower() == "true":
             cleanup_tigris_tmp(target)
 
