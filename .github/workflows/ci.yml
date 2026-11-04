@@ -115,9 +115,9 @@ jobs:
       - name: dbt build
         run: dbt build --target dev --profiles-dir . --fail-fast
 
-      # Pulizia sempre, anche se il build fallisce o il run viene annullato
+      # Pulizia solo se la build fallisce o pr viene cancellata-
       - name: Drop temporary resources
-        if: always()
+        if: failure() || cancelled()
         run: |
           python scripts/ci_resources.py drop --pr "$PR_NUM" --run "$RUN_TAG" \
             || echo "::warning::Pulizia delle risorse temporanee non riuscita per il run ${RUN_TAG}"
@@ -150,5 +150,6 @@ jobs:
           pip install boto3
           command -v psql >/dev/null || (sudo apt-get update -y && sudo apt-get install -y postgresql-client)
 
-      - name: Drop all temporary resources of this PR
-        run: python scripts/ci_resources.py drop --pr "$PR_NUM"
+      - name: Drop temporary resources on failure
+        run: |
+          python scripts/ci_resources.py drop --pr "$PR_NUM"
