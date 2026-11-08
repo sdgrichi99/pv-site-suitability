@@ -42,6 +42,9 @@ duck_db_trial:
         - module: ducklake_plugin
           config:
             env_suffix: DEV
+            # Aggancia in sola lettura anche il catalogo di produzione (lakehouse_prd),
+            # solo se le variabili *_PRD sono presenti (utile per --defer).
+            attach_prd_readonly: true
     prd:
       type: duckdb
       path: ":memory:"

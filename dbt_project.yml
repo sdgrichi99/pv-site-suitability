@@ -21,23 +21,28 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# Statistiche d'uso anonime disattivate: dbt non crea piu' il file .user.yml
+flags:
+  send_anonymous_usage_stats: false
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-# Tutti i layer sono tabelle DuckLake (database `lakehouse`):
-# metadati su Postgres Neon, dati come file Parquet su Tigris.
-# L'ambiente (dev/prd) e' scelto dal target dbt, che seleziona Neon e bucket.
+# Tutti i layer sono tabelle DuckLake: metadati su Postgres Neon, dati come file Parquet su Tigris.
+# Il catalogo si chiama lakehouse_<target> (lakehouse_dev, lakehouse_prd): l'alias e' assegnato
+# da ducklake_plugin.py e vale solo per la sessione. Alias diversi per ambiente permettono a
+# dbt --defer di leggere dal catalogo di produzione (lakehouse_prd) in una sessione dev.
 models:
   duck_db_trial:
     bronze:
-      +database: lakehouse
+      +database: "lakehouse_{{ target.name }}"
       +materialized: table
       +schema: bronze
     silver:
-      +database: lakehouse
+      +database: "lakehouse_{{ target.name }}"
       +materialized: table
       +schema: silver
     gold:
-      +database: lakehouse
+      +database: "lakehouse_{{ target.name }}"
       +materialized: table
       +schema: gold

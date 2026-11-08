@@ -10,3 +10,4 @@ data_refresh.py
 manifest.json
 export_to_parquet.sql
 prod_artifacts/
+.user.yml
