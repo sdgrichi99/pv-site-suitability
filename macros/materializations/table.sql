@@ -1,15 +1,15 @@
 {#
   Override della materializzazione "table" di dbt-duckdb, SOLO opt-in.
 
-  Se il modello dichiara config(direct_create=true) ed e' una tabella del database
-  'lakehouse' (DuckLake), in SQL, senza partizioni, ordinamenti o contratti, la tabella
-  viene creata direttamente col nome finale con "create or replace table", senza passare
-  da <nome>__dbt_tmp. In questo modo la cartella dei file su Tigris si chiama
+  Se il modello dichiara config(direct_create=true) ed e' una tabella di un catalogo
+  'lakehouse_<target>' (DuckLake), in SQL, senza partizioni, ordinamenti o contratti, la
+  tabella viene creata direttamente col nome finale con "create or replace table", senza
+  passare da <nome>__dbt_tmp. In questo modo la cartella dei file su Tigris si chiama
   <schema>/<nome>/ e non <nome>__dbt_tmp/.
 
-  NOTA: il controllo e' sul nome del database e non su adapter.is_ducklake(): il database
-  'lakehouse' viene agganciato dal plugin ducklake_plugin e non e' dichiarato DuckLake nel
-  profilo, quindi l'adapter lo tratta come un normale database DuckDB e is_ducklake() e'
+  NOTA: il controllo e' sul nome del database e non su adapter.is_ducklake(): il catalogo
+  'lakehouse_<target>' viene agganciato dal plugin ducklake_plugin e non e' dichiarato DuckLake
+  nel profilo, quindi l'adapter lo tratta come un normale database DuckDB e is_ducklake() e'
   sempre False.
 
   In tutti gli altri casi il comportamento e' identico a quello originale dell'adapter
@@ -28,7 +28,7 @@
   {%- set direct_partitioned_by = duckdb__get_partitioned_by(target_relation, false) -%}
   {%- set direct_sorted_by = duckdb__get_sorted_by(target_relation, false) -%}
   {%- if config.get('direct_create', false)
-         and target_relation.database == 'lakehouse'
+         and target_relation.database.startswith('lakehouse_')
          and language == 'sql'
          and not direct_partitioned_by
          and not direct_sorted_by
