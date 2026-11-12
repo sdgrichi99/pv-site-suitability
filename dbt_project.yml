@@ -38,6 +38,9 @@ models:
       +database: "lakehouse_{{ target.name }}"
       +materialized: table
       +schema: bronze
+      # dopo ogni modello di bronze: righe caricate oggi nel registro audit.model_load_log
+      # (macros/model_load_log.sql)
+      +post-hook: "{{ log_model_rows(this) }}"
     silver:
       +database: "lakehouse_{{ target.name }}"
       +materialized: table
@@ -46,3 +49,25 @@ models:
       +database: "lakehouse_{{ target.name }}"
       +materialized: table
       +schema: gold
+      # dopo ogni modello del gold: esportazione dell'intera tabella in un unico file Parquet,
+      # <bucket>/export/gold/<tabella>.parquet (macros/export_table.sql)
+      +post-hook: "{{ export_table(this) }}"
+
+# Registro dei caricamenti: schema e tabella creati, se mancano, prima di ogni esecuzione.
+on-run-start:
+  - "{{ create_model_load_log_schema() }}"
+  - "{{ create_model_load_log() }}"
+
+# La griglia dei punti meteo (seeds/grid_points.csv) sta nello schema bronze dello stesso catalogo.
+seeds:
+  duck_db_trial:
+    +database: "lakehouse_{{ target.name }}"
+    +schema: bronze
+    grid_points:
+      +column_types:
+        grid_id: varchar
+        latitude: double
+        longitude: double
+        land_fraction: double
+        cod_reg: integer
+        cod_prov: integer

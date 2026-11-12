@@ -1,0 +1,734 @@
+grid_id,latitude,longitude,land_fraction,cod_reg,den_reg,cod_prov,den_prov,sigla_prov
+35.50_12.25,35.50,12.25,0.0000,19,Sicilia,84,Agrigento,AG
+35.50_12.50,35.50,12.50,0.0350,19,Sicilia,84,Agrigento,AG
+35.50_12.75,35.50,12.75,0.0025,19,Sicilia,84,Agrigento,AG
+35.75_12.75,35.75,12.75,0.0075,19,Sicilia,84,Agrigento,AG
+35.75_13.00,35.75,13.00,0.0025,19,Sicilia,84,Agrigento,AG
+36.00_12.75,36.00,12.75,0.0000,19,Sicilia,84,Agrigento,AG
+36.00_13.00,36.00,13.00,0.0000,19,Sicilia,84,Agrigento,AG
+36.75_12.00,36.75,12.00,0.1350,19,Sicilia,81,Trapani,TP
+36.75_14.50,36.75,14.50,0.2500,19,Sicilia,88,Ragusa,RG
+36.75_14.75,36.75,14.75,0.6025,19,Sicilia,88,Ragusa,RG
+36.75_15.00,36.75,15.00,0.6925,19,Sicilia,89,Siracusa,SR
+36.75_15.25,36.75,15.25,0.0100,19,Sicilia,89,Siracusa,SR
+37.00_13.75,37.00,13.75,0.0025,19,Sicilia,84,Agrigento,AG
+37.00_14.00,37.00,14.00,0.0725,19,Sicilia,84,Agrigento,AG
+37.00_14.25,37.00,14.25,0.2875,19,Sicilia,85,Caltanissetta,CL
+37.00_14.50,37.00,14.50,0.9500,19,Sicilia,88,Ragusa,RG
+37.00_14.75,37.00,14.75,1.0000,19,Sicilia,88,Ragusa,RG
+37.00_15.00,37.00,15.00,1.0000,19,Sicilia,89,Siracusa,SR
+37.00_15.25,37.00,15.25,0.4675,19,Sicilia,89,Siracusa,SR
+37.25_13.25,37.25,13.25,0.0175,19,Sicilia,84,Agrigento,AG
+37.25_13.50,37.25,13.50,0.3425,19,Sicilia,84,Agrigento,AG
+37.25_13.75,37.25,13.75,0.8350,19,Sicilia,84,Agrigento,AG
+37.25_14.00,37.25,14.00,1.0000,19,Sicilia,85,Caltanissetta,CL
+37.25_14.25,37.25,14.25,1.0000,19,Sicilia,85,Caltanissetta,CL
+37.25_14.50,37.25,14.50,1.0000,19,Sicilia,87,Catania,CT
+37.25_14.75,37.25,14.75,1.0000,19,Sicilia,87,Catania,CT
+37.25_15.00,37.25,15.00,0.9675,19,Sicilia,89,Siracusa,SR
+37.25_15.25,37.25,15.25,0.2300,19,Sicilia,89,Siracusa,SR
+37.50_12.50,37.50,12.50,0.0000,19,Sicilia,81,Trapani,TP
+37.50_12.75,37.50,12.75,0.1925,19,Sicilia,81,Trapani,TP
+37.50_13.00,37.50,13.00,0.3650,19,Sicilia,84,Agrigento,AG
+37.50_13.25,37.50,13.25,0.7825,19,Sicilia,84,Agrigento,AG
+37.50_13.50,37.50,13.50,1.0000,19,Sicilia,84,Agrigento,AG
+37.50_13.75,37.50,13.75,1.0000,19,Sicilia,85,Caltanissetta,CL
+37.50_14.00,37.50,14.00,1.0000,19,Sicilia,85,Caltanissetta,CL
+37.50_14.25,37.50,14.25,1.0000,19,Sicilia,86,Enna,EN
+37.50_14.50,37.50,14.50,1.0000,19,Sicilia,86,Enna,EN
+37.50_14.75,37.50,14.75,1.0000,19,Sicilia,87,Catania,CT
+37.50_15.00,37.50,15.00,0.9150,19,Sicilia,87,Catania,CT
+37.50_15.25,37.50,15.25,0.0550,19,Sicilia,87,Catania,CT
+37.75_12.50,37.75,12.50,0.5600,19,Sicilia,81,Trapani,TP
+37.75_12.75,37.75,12.75,1.0000,19,Sicilia,81,Trapani,TP
+37.75_13.00,37.75,13.00,1.0000,19,Sicilia,81,Trapani,TP
+37.75_13.25,37.75,13.25,1.0000,19,Sicilia,82,Palermo,PA
+37.75_13.50,37.75,13.50,1.0000,19,Sicilia,82,Palermo,PA
+37.75_13.75,37.75,13.75,1.0000,19,Sicilia,82,Palermo,PA
+37.75_14.00,37.75,14.00,1.0000,19,Sicilia,82,Palermo,PA
+37.75_14.25,37.75,14.25,1.0000,19,Sicilia,82,Palermo,PA
+37.75_14.50,37.75,14.50,1.0000,19,Sicilia,86,Enna,EN
+37.75_14.75,37.75,14.75,1.0000,19,Sicilia,87,Catania,CT
+37.75_15.00,37.75,15.00,1.0000,19,Sicilia,87,Catania,CT
+37.75_15.25,37.75,15.25,0.4275,19,Sicilia,87,Catania,CT
+38.00_12.00,38.00,12.00,0.0175,19,Sicilia,81,Trapani,TP
+38.00_12.25,38.00,12.25,0.0450,19,Sicilia,81,Trapani,TP
+38.00_12.50,38.00,12.50,0.3875,19,Sicilia,81,Trapani,TP
+38.00_12.75,38.00,12.75,0.8775,19,Sicilia,81,Trapani,TP
+38.00_13.00,38.00,13.00,0.7475,19,Sicilia,82,Palermo,PA
+38.00_13.25,38.00,13.25,1.0000,19,Sicilia,82,Palermo,PA
+38.00_13.50,38.00,13.50,0.8200,19,Sicilia,82,Palermo,PA
+38.00_13.75,38.00,13.75,0.4400,19,Sicilia,82,Palermo,PA
+38.00_14.00,38.00,14.00,0.5875,19,Sicilia,82,Palermo,PA
+38.00_14.25,38.00,14.25,0.5600,19,Sicilia,83,Messina,ME
+38.00_14.50,38.00,14.50,0.6800,19,Sicilia,83,Messina,ME
+38.00_14.75,38.00,14.75,0.9575,19,Sicilia,83,Messina,ME
+38.00_15.00,38.00,15.00,1.0000,19,Sicilia,83,Messina,ME
+38.00_15.25,38.00,15.25,0.9600,19,Sicilia,83,Messina,ME
+38.00_15.50,38.00,15.50,0.2175,19,Sicilia,83,Messina,ME
+38.00_15.75,38.00,15.75,0.7125,18,Calabria,80,Reggio Calabria,RC
+38.00_16.00,38.00,16.00,0.7775,18,Calabria,80,Reggio Calabria,RC
+38.00_16.25,38.00,16.25,0.0475,18,Calabria,80,Reggio Calabria,RC
+38.25_12.75,38.25,12.75,0.0475,19,Sicilia,81,Trapani,TP
+38.25_13.00,38.25,13.00,0.0475,19,Sicilia,82,Palermo,PA
+38.25_13.25,38.25,13.25,0.2600,19,Sicilia,82,Palermo,PA
+38.25_13.50,38.25,13.50,0.0000,19,Sicilia,82,Palermo,PA
+38.25_14.75,38.25,14.75,0.0850,19,Sicilia,83,Messina,ME
+38.25_15.00,38.25,15.00,0.1175,19,Sicilia,83,Messina,ME
+38.25_15.25,38.25,15.25,0.2800,19,Sicilia,83,Messina,ME
+38.25_15.50,38.25,15.50,0.4325,19,Sicilia,83,Messina,ME
+38.25_15.75,38.25,15.75,0.5925,18,Calabria,80,Reggio Calabria,RC
+38.25_16.00,38.25,16.00,1.0000,18,Calabria,80,Reggio Calabria,RC
+38.25_16.25,38.25,16.25,0.6300,18,Calabria,80,Reggio Calabria,RC
+38.25_16.50,38.25,16.50,0.0900,18,Calabria,80,Reggio Calabria,RC
+38.50_14.25,38.50,14.25,0.0075,19,Sicilia,83,Messina,ME
+38.50_14.50,38.50,14.50,0.0125,19,Sicilia,83,Messina,ME
+38.50_14.75,38.50,14.75,0.0500,19,Sicilia,83,Messina,ME
+38.50_15.00,38.50,15.00,0.1000,19,Sicilia,83,Messina,ME
+38.50_15.75,38.50,15.75,0.0250,18,Calabria,102,Vibo Valentia,VV
+38.50_16.00,38.50,16.00,0.9100,18,Calabria,80,Reggio Calabria,RC
+38.50_16.25,38.50,16.25,1.0000,18,Calabria,102,Vibo Valentia,VV
+38.50_16.50,38.50,16.50,0.7725,18,Calabria,80,Reggio Calabria,RC
+38.75_8.50,38.75,8.50,0.0000,20,Sardegna,119,Sulcis Iglesiente,CI
+38.75_8.75,38.75,8.75,0.0025,20,Sardegna,119,Sulcis Iglesiente,CI
+38.75_13.25,38.75,13.25,0.0150,19,Sicilia,82,Palermo,PA
+38.75_15.00,38.75,15.00,0.0075,19,Sicilia,83,Messina,ME
+38.75_15.25,38.75,15.25,0.0200,19,Sicilia,83,Messina,ME
+38.75_15.75,38.75,15.75,0.0250,18,Calabria,102,Vibo Valentia,VV
+38.75_16.00,38.75,16.00,0.3325,18,Calabria,102,Vibo Valentia,VV
+38.75_16.25,38.75,16.25,0.8100,18,Calabria,102,Vibo Valentia,VV
+38.75_16.50,38.75,16.50,0.8150,18,Calabria,79,Catanzaro,CZ
+38.75_16.75,38.75,16.75,0.0475,18,Calabria,79,Catanzaro,CZ
+39.00_8.25,39.00,8.25,0.0525,20,Sardegna,119,Sulcis Iglesiente,CI
+39.00_8.50,39.00,8.50,0.4125,20,Sardegna,119,Sulcis Iglesiente,CI
+39.00_8.75,39.00,8.75,0.8900,20,Sardegna,119,Sulcis Iglesiente,CI
+39.00_9.00,39.00,9.00,0.4375,20,Sardegna,118,Cagliari,CA
+39.00_9.50,39.00,9.50,0.0050,20,Sardegna,118,Cagliari,CA
+39.00_16.00,39.00,16.00,0.0625,18,Calabria,78,Cosenza,CS
+39.00_16.25,39.00,16.25,0.8825,18,Calabria,79,Catanzaro,CZ
+39.00_16.50,39.00,16.50,1.0000,18,Calabria,79,Catanzaro,CZ
+39.00_16.75,39.00,16.75,0.9350,18,Calabria,79,Catanzaro,CZ
+39.00_17.00,39.00,17.00,0.8025,18,Calabria,101,Crotone,KR
+39.00_17.25,39.00,17.25,0.0850,18,Calabria,101,Crotone,KR
+39.25_8.25,39.25,8.25,0.0650,20,Sardegna,119,Sulcis Iglesiente,CI
+39.25_8.50,39.25,8.50,0.8650,20,Sardegna,119,Sulcis Iglesiente,CI
+39.25_8.75,39.25,8.75,1.0000,20,Sardegna,118,Cagliari,CA
+39.25_9.00,39.25,9.00,0.8825,20,Sardegna,118,Cagliari,CA
+39.25_9.25,39.25,9.25,0.6800,20,Sardegna,118,Cagliari,CA
+39.25_9.50,39.25,9.50,0.8025,20,Sardegna,118,Cagliari,CA
+39.25_9.75,39.25,9.75,0.0000,20,Sardegna,118,Cagliari,CA
+39.25_16.00,39.25,16.00,0.2900,18,Calabria,78,Cosenza,CS
+39.25_16.25,39.25,16.25,1.0000,18,Calabria,78,Cosenza,CS
+39.25_16.50,39.25,16.50,1.0000,18,Calabria,78,Cosenza,CS
+39.25_16.75,39.25,16.75,1.0000,18,Calabria,101,Crotone,KR
+39.25_17.00,39.25,17.00,0.9725,18,Calabria,101,Crotone,KR
+39.25_17.25,39.25,17.25,0.0175,18,Calabria,101,Crotone,KR
+39.50_8.25,39.50,8.25,0.0000,20,Sardegna,119,Sulcis Iglesiente,CI
+39.50_8.50,39.50,8.50,0.8075,20,Sardegna,117,Medio Campidano,VS
+39.50_8.75,39.50,8.75,1.0000,20,Sardegna,117,Medio Campidano,VS
+39.50_9.00,39.50,9.00,1.0000,20,Sardegna,118,Cagliari,CA
+39.50_9.25,39.50,9.25,1.0000,20,Sardegna,118,Cagliari,CA
+39.50_9.50,39.50,9.50,0.9900,20,Sardegna,118,Cagliari,CA
+39.50_9.75,39.50,9.75,0.0650,20,Sardegna,116,Ogliastra,OG
+39.50_15.75,39.50,15.75,0.0150,18,Calabria,78,Cosenza,CS
+39.50_16.00,39.50,16.00,0.7300,18,Calabria,78,Cosenza,CS
+39.50_16.25,39.50,16.25,1.0000,18,Calabria,78,Cosenza,CS
+39.50_16.50,39.50,16.50,1.0000,18,Calabria,78,Cosenza,CS
+39.50_16.75,39.50,16.75,0.9150,18,Calabria,78,Cosenza,CS
+39.50_17.00,39.50,17.00,0.3975,18,Calabria,101,Crotone,KR
+39.50_17.25,39.50,17.25,0.0075,18,Calabria,101,Crotone,KR
+39.75_8.50,39.75,8.50,0.5075,20,Sardegna,115,Oristano,OR
+39.75_8.75,39.75,8.75,1.0000,20,Sardegna,115,Oristano,OR
+39.75_9.00,39.75,9.00,1.0000,20,Sardegna,117,Medio Campidano,VS
+39.75_9.25,39.75,9.25,1.0000,20,Sardegna,118,Cagliari,CA
+39.75_9.50,39.75,9.50,1.0000,20,Sardegna,116,Ogliastra,OG
+39.75_9.75,39.75,9.75,0.1875,20,Sardegna,116,Ogliastra,OG
+39.75_15.75,39.75,15.75,0.2825,18,Calabria,78,Cosenza,CS
+39.75_16.00,39.75,16.00,1.0000,18,Calabria,78,Cosenza,CS
+39.75_16.25,39.75,16.25,1.0000,18,Calabria,78,Cosenza,CS
+39.75_16.50,39.75,16.50,0.5700,18,Calabria,78,Cosenza,CS
+39.75_18.25,39.75,18.25,0.1750,16,Puglia,75,Lecce,LE
+39.75_18.50,39.75,18.50,0.0150,16,Puglia,75,Lecce,LE
+40.00_8.25,40.00,8.25,0.0025,20,Sardegna,115,Oristano,OR
+40.00_8.50,40.00,8.50,0.7500,20,Sardegna,115,Oristano,OR
+40.00_8.75,40.00,8.75,1.0000,20,Sardegna,115,Oristano,OR
+40.00_9.00,40.00,9.00,1.0000,20,Sardegna,115,Oristano,OR
+40.00_9.25,40.00,9.25,1.0000,20,Sardegna,114,Nuoro,NU
+40.00_9.50,40.00,9.50,1.0000,20,Sardegna,116,Ogliastra,OG
+40.00_9.75,40.00,9.75,0.3050,20,Sardegna,116,Ogliastra,OG
+40.00_15.25,40.00,15.25,0.2075,15,Campania,65,Salerno,SA
+40.00_15.50,40.00,15.50,0.3225,15,Campania,65,Salerno,SA
+40.00_15.75,40.00,15.75,0.7225,17,Basilicata,76,Potenza,PZ
+40.00_16.00,40.00,16.00,1.0000,17,Basilicata,76,Potenza,PZ
+40.00_16.25,40.00,16.25,1.0000,17,Basilicata,76,Potenza,PZ
+40.00_16.50,40.00,16.50,0.9125,18,Calabria,78,Cosenza,CS
+40.00_16.75,40.00,16.75,0.0050,18,Calabria,78,Cosenza,CS
+40.00_18.00,40.00,18.00,0.3850,16,Puglia,75,Lecce,LE
+40.00_18.25,40.00,18.25,1.0000,16,Puglia,75,Lecce,LE
+40.00_18.50,40.00,18.50,0.2575,16,Puglia,75,Lecce,LE
+40.25_8.50,40.25,8.50,0.6875,20,Sardegna,115,Oristano,OR
+40.25_8.75,40.25,8.75,1.0000,20,Sardegna,114,Nuoro,NU
+40.25_9.00,40.25,9.00,1.0000,20,Sardegna,114,Nuoro,NU
+40.25_9.25,40.25,9.25,1.0000,20,Sardegna,114,Nuoro,NU
+40.25_9.50,40.25,9.50,1.0000,20,Sardegna,114,Nuoro,NU
+40.25_9.75,40.25,9.75,0.1075,20,Sardegna,114,Nuoro,NU
+40.25_15.00,40.25,15.00,0.5125,15,Campania,65,Salerno,SA
+40.25_15.25,40.25,15.25,0.9750,15,Campania,65,Salerno,SA
+40.25_15.50,40.25,15.50,1.0000,15,Campania,65,Salerno,SA
+40.25_15.75,40.25,15.75,1.0000,17,Basilicata,76,Potenza,PZ
+40.25_16.00,40.25,16.00,1.0000,17,Basilicata,76,Potenza,PZ
+40.25_16.25,40.25,16.25,1.0000,17,Basilicata,76,Potenza,PZ
+40.25_16.50,40.25,16.50,1.0000,17,Basilicata,77,Matera,MT
+40.25_16.75,40.25,16.75,0.5250,17,Basilicata,77,Matera,MT
+40.25_17.25,40.25,17.25,0.0175,16,Puglia,73,Taranto,TA
+40.25_17.50,40.25,17.50,0.2425,16,Puglia,73,Taranto,TA
+40.25_17.75,40.25,17.75,0.3225,16,Puglia,73,Taranto,TA
+40.25_18.00,40.25,18.00,0.8625,16,Puglia,75,Lecce,LE
+40.25_18.25,40.25,18.25,0.9825,16,Puglia,75,Lecce,LE
+40.25_18.50,40.25,18.50,0.2600,16,Puglia,75,Lecce,LE
+40.50_8.25,40.50,8.25,0.2075,20,Sardegna,112,Sassari,SS
+40.50_8.50,40.50,8.50,0.9725,20,Sardegna,112,Sassari,SS
+40.50_8.75,40.50,8.75,1.0000,20,Sardegna,112,Sassari,SS
+40.50_9.00,40.50,9.00,1.0000,20,Sardegna,112,Sassari,SS
+40.50_9.25,40.50,9.25,1.0000,20,Sardegna,114,Nuoro,NU
+40.50_9.50,40.50,9.50,1.0000,20,Sardegna,114,Nuoro,NU
+40.50_9.75,40.50,9.75,0.6575,20,Sardegna,114,Nuoro,NU
+40.50_14.25,40.50,14.25,0.0500,15,Campania,63,Napoli,NA
+40.50_14.50,40.50,14.50,0.0375,15,Campania,63,Napoli,NA
+40.50_14.75,40.50,14.75,0.0075,15,Campania,65,Salerno,SA
+40.50_15.00,40.50,15.00,0.7625,15,Campania,65,Salerno,SA
+40.50_15.25,40.50,15.25,1.0000,15,Campania,65,Salerno,SA
+40.50_15.50,40.50,15.50,1.0000,15,Campania,65,Salerno,SA
+40.50_15.75,40.50,15.75,1.0000,17,Basilicata,76,Potenza,PZ
+40.50_16.00,40.50,16.00,1.0000,17,Basilicata,76,Potenza,PZ
+40.50_16.25,40.50,16.25,1.0000,17,Basilicata,77,Matera,MT
+40.50_16.50,40.50,16.50,1.0000,17,Basilicata,77,Matera,MT
+40.50_16.75,40.50,16.75,0.9925,17,Basilicata,77,Matera,MT
+40.50_17.00,40.50,17.00,0.5525,16,Puglia,73,Taranto,TA
+40.50_17.25,40.50,17.25,0.7825,16,Puglia,73,Taranto,TA
+40.50_17.50,40.50,17.50,1.0000,16,Puglia,73,Taranto,TA
+40.50_17.75,40.50,17.75,1.0000,16,Puglia,74,Brindisi,BR
+40.50_18.00,40.50,18.00,0.8625,16,Puglia,74,Brindisi,BR
+40.50_18.25,40.50,18.25,0.2175,16,Puglia,75,Lecce,LE
+40.75_8.25,40.75,8.25,0.7400,20,Sardegna,112,Sassari,SS
+40.75_8.50,40.75,8.50,0.8325,20,Sardegna,112,Sassari,SS
+40.75_8.75,40.75,8.75,1.0000,20,Sardegna,112,Sassari,SS
+40.75_9.00,40.75,9.00,1.0000,20,Sardegna,112,Sassari,SS
+40.75_9.25,40.75,9.25,1.0000,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+40.75_9.50,40.75,9.50,1.0000,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+40.75_9.75,40.75,9.75,0.3300,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+40.75_13.00,40.75,13.00,0.0000,12,Lazio,59,Latina,LT
+40.75_13.50,40.75,13.50,0.0025,12,Lazio,59,Latina,LT
+40.75_13.75,40.75,13.75,0.0150,15,Campania,63,Napoli,NA
+40.75_14.00,40.75,14.00,0.1600,15,Campania,63,Napoli,NA
+40.75_14.25,40.75,14.25,0.2300,15,Campania,63,Napoli,NA
+40.75_14.50,40.75,14.50,0.8525,15,Campania,63,Napoli,NA
+40.75_14.75,40.75,14.75,0.9025,15,Campania,65,Salerno,SA
+40.75_15.00,40.75,15.00,1.0000,15,Campania,65,Salerno,SA
+40.75_15.25,40.75,15.25,1.0000,15,Campania,65,Salerno,SA
+40.75_15.50,40.75,15.50,1.0000,17,Basilicata,76,Potenza,PZ
+40.75_15.75,40.75,15.75,1.0000,17,Basilicata,76,Potenza,PZ
+40.75_16.00,40.75,16.00,1.0000,17,Basilicata,76,Potenza,PZ
+40.75_16.25,40.75,16.25,1.0000,17,Basilicata,77,Matera,MT
+40.75_16.50,40.75,16.50,1.0000,16,Puglia,72,Bari,BA
+40.75_16.75,40.75,16.75,1.0000,16,Puglia,72,Bari,BA
+40.75_17.00,40.75,17.00,1.0000,16,Puglia,72,Bari,BA
+40.75_17.25,40.75,17.25,1.0000,16,Puglia,73,Taranto,TA
+40.75_17.50,40.75,17.50,0.8075,16,Puglia,74,Brindisi,BR
+40.75_17.75,40.75,17.75,0.4325,16,Puglia,74,Brindisi,BR
+40.75_18.00,40.75,18.00,0.0925,16,Puglia,74,Brindisi,BR
+41.00_8.25,41.00,8.25,0.1525,20,Sardegna,112,Sassari,SS
+41.00_8.75,41.00,8.75,0.1900,20,Sardegna,112,Sassari,SS
+41.00_9.00,41.00,9.00,0.8525,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.00_9.25,41.00,9.25,1.0000,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.00_9.50,41.00,9.50,0.7675,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.00_9.75,41.00,9.75,0.0275,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.00_12.75,41.00,12.75,0.0050,12,Lazio,59,Latina,LT
+41.00_13.00,41.00,13.00,0.0175,12,Lazio,59,Latina,LT
+41.00_13.75,41.00,13.75,0.0000,15,Campania,61,Caserta,CE
+41.00_14.00,41.00,14.00,0.6725,15,Campania,61,Caserta,CE
+41.00_14.25,41.00,14.25,1.0000,15,Campania,61,Caserta,CE
+41.00_14.50,41.00,14.50,1.0000,15,Campania,63,Napoli,NA
+41.00_14.75,41.00,14.75,1.0000,15,Campania,64,Avellino,AV
+41.00_15.00,41.00,15.00,1.0000,15,Campania,64,Avellino,AV
+41.00_15.25,41.00,15.25,1.0000,15,Campania,64,Avellino,AV
+41.00_15.50,41.00,15.50,1.0000,15,Campania,64,Avellino,AV
+41.00_15.75,41.00,15.75,1.0000,17,Basilicata,76,Potenza,PZ
+41.00_16.00,41.00,16.00,1.0000,17,Basilicata,76,Potenza,PZ
+41.00_16.25,41.00,16.25,1.0000,16,Puglia,110,Barletta-Andria-Trani,BT
+41.00_16.50,41.00,16.50,1.0000,16,Puglia,72,Bari,BA
+41.00_16.75,41.00,16.75,1.0000,16,Puglia,72,Bari,BA
+41.00_17.00,41.00,17.00,0.8550,16,Puglia,72,Bari,BA
+41.00_17.25,41.00,17.25,0.4175,16,Puglia,72,Bari,BA
+41.00_17.50,41.00,17.50,0.0075,16,Puglia,74,Brindisi,BR
+41.25_9.00,41.25,9.00,0.0100,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.25_9.25,41.25,9.25,0.3800,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.25_9.50,41.25,9.50,0.1350,20,Sardegna,113,Gallura Nord-Est Sardegna,OT
+41.25_13.00,41.25,13.00,0.2850,12,Lazio,59,Latina,LT
+41.25_13.25,41.25,13.25,0.3625,12,Lazio,59,Latina,LT
+41.25_13.50,41.25,13.50,0.5225,12,Lazio,59,Latina,LT
+41.25_13.75,41.25,13.75,0.6425,12,Lazio,59,Latina,LT
+41.25_14.00,41.25,14.00,1.0000,15,Campania,61,Caserta,CE
+41.25_14.25,41.25,14.25,1.0000,15,Campania,61,Caserta,CE
+41.25_14.50,41.25,14.50,1.0000,15,Campania,62,Benevento,BN
+41.25_14.75,41.25,14.75,1.0000,15,Campania,62,Benevento,BN
+41.25_15.00,41.25,15.00,1.0000,15,Campania,62,Benevento,BN
+41.25_15.25,41.25,15.25,1.0000,16,Puglia,71,Foggia,FG
+41.25_15.50,41.25,15.50,1.0000,16,Puglia,71,Foggia,FG
+41.25_15.75,41.25,15.75,1.0000,16,Puglia,71,Foggia,FG
+41.25_16.00,41.25,16.00,1.0000,16,Puglia,110,Barletta-Andria-Trani,BT
+41.25_16.25,41.25,16.25,0.8550,16,Puglia,110,Barletta-Andria-Trani,BT
+41.25_16.50,41.25,16.50,0.4825,16,Puglia,72,Bari,BA
+41.25_16.75,41.25,16.75,0.1550,16,Puglia,72,Bari,BA
+41.25_17.00,41.25,17.00,0.0000,16,Puglia,72,Bari,BA
+41.50_12.50,41.50,12.50,0.2300,12,Lazio,58,Roma,RM
+41.50_12.75,41.50,12.75,0.7900,12,Lazio,59,Latina,LT
+41.50_13.00,41.50,13.00,0.9850,12,Lazio,59,Latina,LT
+41.50_13.25,41.50,13.25,1.0000,12,Lazio,59,Latina,LT
+41.50_13.50,41.50,13.50,1.0000,12,Lazio,60,Frosinone,FR
+41.50_13.75,41.50,13.75,1.0000,12,Lazio,60,Frosinone,FR
+41.50_14.00,41.50,14.00,1.0000,14,Molise,94,Isernia,IS
+41.50_14.25,41.50,14.25,1.0000,14,Molise,94,Isernia,IS
+41.50_14.50,41.50,14.50,1.0000,14,Molise,70,Campobasso,CB
+41.50_14.75,41.50,14.75,1.0000,14,Molise,70,Campobasso,CB
+41.50_15.00,41.50,15.00,1.0000,16,Puglia,71,Foggia,FG
+41.50_15.25,41.50,15.25,1.0000,16,Puglia,71,Foggia,FG
+41.50_15.50,41.50,15.50,1.0000,16,Puglia,71,Foggia,FG
+41.50_15.75,41.50,15.75,1.0000,16,Puglia,71,Foggia,FG
+41.50_16.00,41.50,16.00,0.3325,16,Puglia,71,Foggia,FG
+41.50_16.25,41.50,16.25,0.0050,16,Puglia,110,Barletta-Andria-Trani,BT
+41.75_12.25,41.75,12.25,0.4125,12,Lazio,58,Roma,RM
+41.75_12.50,41.75,12.50,0.9600,12,Lazio,58,Roma,RM
+41.75_12.75,41.75,12.75,1.0000,12,Lazio,58,Roma,RM
+41.75_13.00,41.75,13.00,1.0000,12,Lazio,58,Roma,RM
+41.75_13.25,41.75,13.25,1.0000,12,Lazio,60,Frosinone,FR
+41.75_13.50,41.75,13.50,1.0000,12,Lazio,60,Frosinone,FR
+41.75_13.75,41.75,13.75,1.0000,12,Lazio,60,Frosinone,FR
+41.75_14.00,41.75,14.00,1.0000,13,Abruzzo,66,L'Aquila,AQ
+41.75_14.25,41.75,14.25,1.0000,14,Molise,94,Isernia,IS
+41.75_14.50,41.75,14.50,1.0000,14,Molise,70,Campobasso,CB
+41.75_14.75,41.75,14.75,1.0000,14,Molise,70,Campobasso,CB
+41.75_15.00,41.75,15.00,1.0000,14,Molise,70,Campobasso,CB
+41.75_15.25,41.75,15.25,1.0000,16,Puglia,71,Foggia,FG
+41.75_15.50,41.75,15.50,1.0000,16,Puglia,71,Foggia,FG
+41.75_15.75,41.75,15.75,1.0000,16,Puglia,71,Foggia,FG
+41.75_16.00,41.75,16.00,0.8225,16,Puglia,71,Foggia,FG
+41.75_16.25,41.75,16.25,0.1250,16,Puglia,71,Foggia,FG
+42.00_11.75,42.00,11.75,0.1125,12,Lazio,58,Roma,RM
+42.00_12.00,42.00,12.00,0.5425,12,Lazio,58,Roma,RM
+42.00_12.25,42.00,12.25,0.9750,12,Lazio,58,Roma,RM
+42.00_12.50,42.00,12.50,1.0000,12,Lazio,58,Roma,RM
+42.00_12.75,42.00,12.75,1.0000,12,Lazio,58,Roma,RM
+42.00_13.00,42.00,13.00,1.0000,12,Lazio,58,Roma,RM
+42.00_13.25,42.00,13.25,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.00_13.50,42.00,13.50,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.00_13.75,42.00,13.75,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.00_14.00,42.00,14.00,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.00_14.25,42.00,14.25,1.0000,13,Abruzzo,69,Chieti,CH
+42.00_14.50,42.00,14.50,1.0000,13,Abruzzo,69,Chieti,CH
+42.00_14.75,42.00,14.75,0.8450,14,Molise,70,Campobasso,CB
+42.00_15.00,42.00,15.00,0.4425,14,Molise,70,Campobasso,CB
+42.00_15.25,42.00,15.25,0.1825,16,Puglia,71,Foggia,FG
+42.00_15.50,42.00,15.50,0.1425,16,Puglia,71,Foggia,FG
+42.00_15.75,42.00,15.75,0.1775,16,Puglia,71,Foggia,FG
+42.00_16.00,42.00,16.00,0.2525,16,Puglia,71,Foggia,FG
+42.00_16.25,42.00,16.25,0.0250,16,Puglia,71,Foggia,FG
+42.25_10.00,42.25,10.00,0.0000,9,Toscana,49,Livorno,LI
+42.25_10.25,42.25,10.25,0.0200,9,Toscana,49,Livorno,LI
+42.25_10.75,42.25,10.75,0.0050,9,Toscana,53,Grosseto,GR
+42.25_11.00,42.25,11.00,0.0375,9,Toscana,53,Grosseto,GR
+42.25_11.25,42.25,11.25,0.0075,9,Toscana,53,Grosseto,GR
+42.25_11.50,42.25,11.50,0.0875,12,Lazio,56,Viterbo,VT
+42.25_11.75,42.25,11.75,0.7825,12,Lazio,56,Viterbo,VT
+42.25_12.00,42.25,12.00,1.0000,12,Lazio,56,Viterbo,VT
+42.25_12.25,42.25,12.25,1.0000,12,Lazio,56,Viterbo,VT
+42.25_12.50,42.25,12.50,1.0000,12,Lazio,58,Roma,RM
+42.25_12.75,42.25,12.75,1.0000,12,Lazio,57,Rieti,RI
+42.25_13.00,42.25,13.00,1.0000,12,Lazio,57,Rieti,RI
+42.25_13.25,42.25,13.25,1.0000,12,Lazio,57,Rieti,RI
+42.25_13.50,42.25,13.50,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.25_13.75,42.25,13.75,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.25_14.00,42.25,14.00,1.0000,13,Abruzzo,68,Pescara,PE
+42.25_14.25,42.25,14.25,1.0000,13,Abruzzo,69,Chieti,CH
+42.25_14.50,42.25,14.50,0.6000,13,Abruzzo,69,Chieti,CH
+42.25_14.75,42.25,14.75,0.0900,13,Abruzzo,69,Chieti,CH
+42.25_15.50,42.25,15.50,0.0000,16,Puglia,71,Foggia,FG
+42.25_15.75,42.25,15.75,0.0000,16,Puglia,71,Foggia,FG
+42.50_10.00,42.50,10.00,0.0125,9,Toscana,49,Livorno,LI
+42.50_11.00,42.50,11.00,0.0625,9,Toscana,53,Grosseto,GR
+42.50_11.25,42.50,11.25,0.7950,9,Toscana,53,Grosseto,GR
+42.50_11.50,42.50,11.50,0.9850,9,Toscana,53,Grosseto,GR
+42.50_11.75,42.50,11.75,1.0000,12,Lazio,56,Viterbo,VT
+42.50_12.00,42.50,12.00,1.0000,12,Lazio,56,Viterbo,VT
+42.50_12.25,42.50,12.25,1.0000,12,Lazio,56,Viterbo,VT
+42.50_12.50,42.50,12.50,1.0000,10,Umbria,55,Terni,TR
+42.50_12.75,42.50,12.75,1.0000,12,Lazio,57,Rieti,RI
+42.50_13.00,42.50,13.00,1.0000,12,Lazio,57,Rieti,RI
+42.50_13.25,42.50,13.25,1.0000,13,Abruzzo,66,L'Aquila,AQ
+42.50_13.50,42.50,13.50,1.0000,13,Abruzzo,67,Teramo,TE
+42.50_13.75,42.50,13.75,1.0000,13,Abruzzo,67,Teramo,TE
+42.50_14.00,42.50,14.00,0.9575,13,Abruzzo,68,Pescara,PE
+42.50_14.25,42.50,14.25,0.3125,13,Abruzzo,68,Pescara,PE
+42.50_14.50,42.50,14.50,0.0000,13,Abruzzo,69,Chieti,CH
+42.75_10.00,42.75,10.00,0.0150,9,Toscana,49,Livorno,LI
+42.75_10.25,42.75,10.25,0.2600,9,Toscana,49,Livorno,LI
+42.75_10.50,42.75,10.50,0.1225,9,Toscana,49,Livorno,LI
+42.75_10.75,42.75,10.75,0.1800,9,Toscana,53,Grosseto,GR
+42.75_11.00,42.75,11.00,0.7425,9,Toscana,53,Grosseto,GR
+42.75_11.25,42.75,11.25,1.0000,9,Toscana,53,Grosseto,GR
+42.75_11.50,42.75,11.50,1.0000,9,Toscana,53,Grosseto,GR
+42.75_11.75,42.75,11.75,1.0000,9,Toscana,53,Grosseto,GR
+42.75_12.00,42.75,12.00,1.0000,10,Umbria,55,Terni,TR
+42.75_12.25,42.75,12.25,1.0000,10,Umbria,55,Terni,TR
+42.75_12.50,42.75,12.50,1.0000,10,Umbria,54,Perugia,PG
+42.75_12.75,42.75,12.75,1.0000,10,Umbria,54,Perugia,PG
+42.75_13.00,42.75,13.00,1.0000,10,Umbria,54,Perugia,PG
+42.75_13.25,42.75,13.25,1.0000,11,Marche,44,Ascoli Piceno,AP
+42.75_13.50,42.75,13.50,1.0000,13,Abruzzo,67,Teramo,TE
+42.75_13.75,42.75,13.75,1.0000,13,Abruzzo,67,Teramo,TE
+42.75_14.00,42.75,14.00,0.4100,13,Abruzzo,67,Teramo,TE
+43.00_9.75,43.00,9.75,0.0300,9,Toscana,49,Livorno,LI
+43.00_10.50,43.00,10.50,0.3125,9,Toscana,49,Livorno,LI
+43.00_10.75,43.00,10.75,0.8425,9,Toscana,53,Grosseto,GR
+43.00_11.00,43.00,11.00,1.0000,9,Toscana,53,Grosseto,GR
+43.00_11.25,43.00,11.25,1.0000,9,Toscana,53,Grosseto,GR
+43.00_11.50,43.00,11.50,1.0000,9,Toscana,52,Siena,SI
+43.00_11.75,43.00,11.75,1.0000,9,Toscana,52,Siena,SI
+43.00_12.00,43.00,12.00,1.0000,10,Umbria,54,Perugia,PG
+43.00_12.25,43.00,12.25,1.0000,10,Umbria,54,Perugia,PG
+43.00_12.50,43.00,12.50,1.0000,10,Umbria,54,Perugia,PG
+43.00_12.75,43.00,12.75,1.0000,10,Umbria,54,Perugia,PG
+43.00_13.00,43.00,13.00,1.0000,11,Marche,43,Macerata,MC
+43.00_13.25,43.00,13.25,1.0000,11,Marche,43,Macerata,MC
+43.00_13.50,43.00,13.50,1.0000,11,Marche,109,Fermo,FM
+43.00_13.75,43.00,13.75,0.9525,11,Marche,44,Ascoli Piceno,AP
+43.00_14.00,43.00,14.00,0.0425,11,Marche,44,Ascoli Piceno,AP
+43.25_10.50,43.25,10.50,0.4775,9,Toscana,49,Livorno,LI
+43.25_10.75,43.25,10.75,1.0000,9,Toscana,50,Pisa,PI
+43.25_11.00,43.25,11.00,1.0000,9,Toscana,52,Siena,SI
+43.25_11.25,43.25,11.25,1.0000,9,Toscana,52,Siena,SI
+43.25_11.50,43.25,11.50,1.0000,9,Toscana,52,Siena,SI
+43.25_11.75,43.25,11.75,1.0000,9,Toscana,52,Siena,SI
+43.25_12.00,43.25,12.00,1.0000,9,Toscana,51,Arezzo,AR
+43.25_12.25,43.25,12.25,1.0000,10,Umbria,54,Perugia,PG
+43.25_12.50,43.25,12.50,1.0000,10,Umbria,54,Perugia,PG
+43.25_12.75,43.25,12.75,1.0000,10,Umbria,54,Perugia,PG
+43.25_13.00,43.25,13.00,1.0000,11,Marche,43,Macerata,MC
+43.25_13.25,43.25,13.25,1.0000,11,Marche,43,Macerata,MC
+43.25_13.50,43.25,13.50,1.0000,11,Marche,43,Macerata,MC
+43.25_13.75,43.25,13.75,0.5625,11,Marche,109,Fermo,FM
+43.50_10.00,43.50,10.00,0.0050,9,Toscana,49,Livorno,LI
+43.50_10.25,43.50,10.25,0.1725,9,Toscana,49,Livorno,LI
+43.50_10.50,43.50,10.50,0.9600,9,Toscana,50,Pisa,PI
+43.50_10.75,43.50,10.75,1.0000,9,Toscana,50,Pisa,PI
+43.50_11.00,43.50,11.00,1.0000,9,Toscana,48,Firenze,FI
+43.50_11.25,43.50,11.25,1.0000,9,Toscana,52,Siena,SI
+43.50_11.50,43.50,11.50,1.0000,9,Toscana,51,Arezzo,AR
+43.50_11.75,43.50,11.75,1.0000,9,Toscana,51,Arezzo,AR
+43.50_12.00,43.50,12.00,1.0000,9,Toscana,51,Arezzo,AR
+43.50_12.25,43.50,12.25,1.0000,10,Umbria,54,Perugia,PG
+43.50_12.50,43.50,12.50,1.0000,11,Marche,41,Pesaro e Urbino,PU
+43.50_12.75,43.50,12.75,1.0000,11,Marche,41,Pesaro e Urbino,PU
+43.50_13.00,43.50,13.00,1.0000,11,Marche,42,Ancona,AN
+43.50_13.25,43.50,13.25,1.0000,11,Marche,42,Ancona,AN
+43.50_13.50,43.50,13.50,0.9175,11,Marche,42,Ancona,AN
+43.50_13.75,43.50,13.75,0.0725,11,Marche,43,Macerata,MC
+43.75_7.50,43.75,7.50,0.1650,7,Liguria,8,Imperia,IM
+43.75_7.75,43.75,7.75,0.2775,7,Liguria,8,Imperia,IM
+43.75_8.00,43.75,8.00,0.0525,7,Liguria,8,Imperia,IM
+43.75_10.25,43.75,10.25,0.4300,9,Toscana,50,Pisa,PI
+43.75_10.50,43.75,10.50,1.0000,9,Toscana,50,Pisa,PI
+43.75_10.75,43.75,10.75,1.0000,9,Toscana,50,Pisa,PI
+43.75_11.00,43.75,11.00,1.0000,9,Toscana,48,Firenze,FI
+43.75_11.25,43.75,11.25,1.0000,9,Toscana,48,Firenze,FI
+43.75_11.50,43.75,11.50,1.0000,9,Toscana,48,Firenze,FI
+43.75_11.75,43.75,11.75,1.0000,9,Toscana,51,Arezzo,AR
+43.75_12.00,43.75,12.00,1.0000,9,Toscana,51,Arezzo,AR
+43.75_12.25,43.75,12.25,1.0000,8,Emilia-Romagna,99,Rimini,RN
+43.75_12.50,43.75,12.50,1.0000,11,Marche,41,Pesaro e Urbino,PU
+43.75_12.75,43.75,12.75,1.0000,11,Marche,41,Pesaro e Urbino,PU
+43.75_13.00,43.75,13.00,0.8900,11,Marche,41,Pesaro e Urbino,PU
+43.75_13.25,43.75,13.25,0.3200,11,Marche,42,Ancona,AN
+43.75_13.50,43.75,13.50,0.0050,11,Marche,42,Ancona,AN
+44.00_7.25,44.00,7.25,0.0050,1,Piemonte,4,Cuneo,CN
+44.00_7.50,44.00,7.50,0.0950,7,Liguria,8,Imperia,IM
+44.00_7.75,44.00,7.75,0.8550,7,Liguria,8,Imperia,IM
+44.00_8.00,44.00,8.00,0.9575,7,Liguria,8,Imperia,IM
+44.00_8.25,44.00,8.25,0.2250,7,Liguria,9,Savona,SV
+44.00_9.75,44.00,9.75,0.1025,7,Liguria,11,La Spezia,SP
+44.00_10.00,44.00,10.00,0.3375,7,Liguria,11,La Spezia,SP
+44.00_10.25,44.00,10.25,0.8875,9,Toscana,46,Lucca,LU
+44.00_10.50,44.00,10.50,1.0000,9,Toscana,46,Lucca,LU
+44.00_10.75,44.00,10.75,1.0000,9,Toscana,47,Pistoia,PT
+44.00_11.00,44.00,11.00,1.0000,9,Toscana,47,Pistoia,PT
+44.00_11.25,44.00,11.25,1.0000,9,Toscana,48,Firenze,FI
+44.00_11.50,44.00,11.50,1.0000,9,Toscana,48,Firenze,FI
+44.00_11.75,44.00,11.75,1.0000,8,Emilia-Romagna,40,Forlì-Cesena,FC
+44.00_12.00,44.00,12.00,1.0000,8,Emilia-Romagna,40,Forlì-Cesena,FC
+44.00_12.25,44.00,12.25,1.0000,8,Emilia-Romagna,40,Forlì-Cesena,FC
+44.00_12.50,44.00,12.50,0.7975,8,Emilia-Romagna,99,Rimini,RN
+44.00_12.75,44.00,12.75,0.3925,8,Emilia-Romagna,99,Rimini,RN
+44.00_13.00,44.00,13.00,0.0500,11,Marche,41,Pesaro e Urbino,PU
+44.25_7.00,44.25,7.00,0.3900,1,Piemonte,4,Cuneo,CN
+44.25_7.25,44.25,7.25,0.8400,1,Piemonte,4,Cuneo,CN
+44.25_7.50,44.25,7.50,0.9450,1,Piemonte,4,Cuneo,CN
+44.25_7.75,44.25,7.75,0.9600,1,Piemonte,4,Cuneo,CN
+44.25_8.00,44.25,8.00,1.0000,1,Piemonte,4,Cuneo,CN
+44.25_8.25,44.25,8.25,0.9375,7,Liguria,9,Savona,SV
+44.25_8.50,44.25,8.50,0.3175,7,Liguria,9,Savona,SV
+44.25_8.75,44.25,8.75,0.0000,7,Liguria,9,Savona,SV
+44.25_9.00,44.25,9.00,0.0050,7,Liguria,10,Genova,GE
+44.25_9.25,44.25,9.25,0.2050,7,Liguria,10,Genova,GE
+44.25_9.50,44.25,9.50,0.6100,7,Liguria,10,Genova,GE
+44.25_9.75,44.25,9.75,0.9825,7,Liguria,11,La Spezia,SP
+44.25_10.00,44.25,10.00,1.0000,9,Toscana,45,Massa-Carrara,MS
+44.25_10.25,44.25,10.25,1.0000,9,Toscana,46,Lucca,LU
+44.25_10.50,44.25,10.50,1.0000,8,Emilia-Romagna,36,Modena,MO
+44.25_10.75,44.25,10.75,1.0000,8,Emilia-Romagna,36,Modena,MO
+44.25_11.00,44.25,11.00,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.25_11.25,44.25,11.25,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.25_11.50,44.25,11.50,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.25_11.75,44.25,11.75,1.0000,8,Emilia-Romagna,39,Ravenna,RA
+44.25_12.00,44.25,12.00,1.0000,8,Emilia-Romagna,40,Forlì-Cesena,FC
+44.25_12.25,44.25,12.25,0.9350,8,Emilia-Romagna,39,Ravenna,RA
+44.25_12.50,44.25,12.50,0.0975,8,Emilia-Romagna,40,Forlì-Cesena,FC
+44.50_6.75,44.50,6.75,0.0125,1,Piemonte,4,Cuneo,CN
+44.50_7.00,44.50,7.00,0.8775,1,Piemonte,4,Cuneo,CN
+44.50_7.25,44.50,7.25,1.0000,1,Piemonte,4,Cuneo,CN
+44.50_7.50,44.50,7.50,1.0000,1,Piemonte,4,Cuneo,CN
+44.50_7.75,44.50,7.75,1.0000,1,Piemonte,4,Cuneo,CN
+44.50_8.00,44.50,8.00,1.0000,1,Piemonte,4,Cuneo,CN
+44.50_8.25,44.50,8.25,1.0000,1,Piemonte,4,Cuneo,CN
+44.50_8.50,44.50,8.50,1.0000,7,Liguria,9,Savona,SV
+44.50_8.75,44.50,8.75,0.8550,7,Liguria,10,Genova,GE
+44.50_9.00,44.50,9.00,0.9500,7,Liguria,10,Genova,GE
+44.50_9.25,44.50,9.25,1.0000,7,Liguria,10,Genova,GE
+44.50_9.50,44.50,9.50,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.50_9.75,44.50,9.75,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.50_10.00,44.50,10.00,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.50_10.25,44.50,10.25,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.50_10.50,44.50,10.50,1.0000,8,Emilia-Romagna,35,Reggio nell'Emilia,RE
+44.50_10.75,44.50,10.75,1.0000,8,Emilia-Romagna,36,Modena,MO
+44.50_11.00,44.50,11.00,1.0000,8,Emilia-Romagna,36,Modena,MO
+44.50_11.25,44.50,11.25,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.50_11.50,44.50,11.50,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.50_11.75,44.50,11.75,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.50_12.00,44.50,12.00,1.0000,8,Emilia-Romagna,39,Ravenna,RA
+44.50_12.25,44.50,12.25,0.6650,8,Emilia-Romagna,39,Ravenna,RA
+44.75_6.75,44.75,6.75,0.0150,1,Piemonte,1,Torino,TO
+44.75_7.00,44.75,7.00,0.5175,1,Piemonte,1,Torino,TO
+44.75_7.25,44.75,7.25,1.0000,1,Piemonte,4,Cuneo,CN
+44.75_7.50,44.75,7.50,1.0000,1,Piemonte,4,Cuneo,CN
+44.75_7.75,44.75,7.75,1.0000,1,Piemonte,4,Cuneo,CN
+44.75_8.00,44.75,8.00,1.0000,1,Piemonte,4,Cuneo,CN
+44.75_8.25,44.75,8.25,1.0000,1,Piemonte,5,Asti,AT
+44.75_8.50,44.75,8.50,1.0000,1,Piemonte,6,Alessandria,AL
+44.75_8.75,44.75,8.75,1.0000,1,Piemonte,6,Alessandria,AL
+44.75_9.00,44.75,9.00,1.0000,1,Piemonte,6,Alessandria,AL
+44.75_9.25,44.75,9.25,1.0000,3,Lombardia,18,Pavia,PV
+44.75_9.50,44.75,9.50,1.0000,8,Emilia-Romagna,33,Piacenza,PC
+44.75_9.75,44.75,9.75,1.0000,8,Emilia-Romagna,33,Piacenza,PC
+44.75_10.00,44.75,10.00,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.75_10.25,44.75,10.25,1.0000,8,Emilia-Romagna,34,Parma,PR
+44.75_10.50,44.75,10.50,1.0000,8,Emilia-Romagna,35,Reggio nell'Emilia,RE
+44.75_10.75,44.75,10.75,1.0000,8,Emilia-Romagna,35,Reggio nell'Emilia,RE
+44.75_11.00,44.75,11.00,1.0000,8,Emilia-Romagna,36,Modena,MO
+44.75_11.25,44.75,11.25,1.0000,8,Emilia-Romagna,37,Bologna,BO
+44.75_11.50,44.75,11.50,1.0000,8,Emilia-Romagna,38,Ferrara,FE
+44.75_11.75,44.75,11.75,1.0000,8,Emilia-Romagna,38,Ferrara,FE
+44.75_12.00,44.75,12.00,1.0000,8,Emilia-Romagna,38,Ferrara,FE
+44.75_12.25,44.75,12.25,0.6025,8,Emilia-Romagna,38,Ferrara,FE
+44.75_12.50,44.75,12.50,0.0925,5,Veneto,29,Rovigo,RO
+45.00_6.75,45.00,6.75,0.6400,1,Piemonte,1,Torino,TO
+45.00_7.00,45.00,7.00,1.0000,1,Piemonte,1,Torino,TO
+45.00_7.25,45.00,7.25,1.0000,1,Piemonte,1,Torino,TO
+45.00_7.50,45.00,7.50,1.0000,1,Piemonte,1,Torino,TO
+45.00_7.75,45.00,7.75,1.0000,1,Piemonte,1,Torino,TO
+45.00_8.00,45.00,8.00,1.0000,1,Piemonte,5,Asti,AT
+45.00_8.25,45.00,8.25,1.0000,1,Piemonte,5,Asti,AT
+45.00_8.50,45.00,8.50,1.0000,1,Piemonte,6,Alessandria,AL
+45.00_8.75,45.00,8.75,1.0000,1,Piemonte,6,Alessandria,AL
+45.00_9.00,45.00,9.00,1.0000,3,Lombardia,18,Pavia,PV
+45.00_9.25,45.00,9.25,1.0000,3,Lombardia,18,Pavia,PV
+45.00_9.50,45.00,9.50,1.0000,8,Emilia-Romagna,33,Piacenza,PC
+45.00_9.75,45.00,9.75,1.0000,8,Emilia-Romagna,33,Piacenza,PC
+45.00_10.00,45.00,10.00,1.0000,8,Emilia-Romagna,33,Piacenza,PC
+45.00_10.25,45.00,10.25,1.0000,8,Emilia-Romagna,34,Parma,PR
+45.00_10.50,45.00,10.50,1.0000,3,Lombardia,20,Mantova,MN
+45.00_10.75,45.00,10.75,1.0000,3,Lombardia,20,Mantova,MN
+45.00_11.00,45.00,11.00,1.0000,3,Lombardia,20,Mantova,MN
+45.00_11.25,45.00,11.25,1.0000,3,Lombardia,20,Mantova,MN
+45.00_11.50,45.00,11.50,1.0000,5,Veneto,29,Rovigo,RO
+45.00_11.75,45.00,11.75,1.0000,5,Veneto,29,Rovigo,RO
+45.00_12.00,45.00,12.00,1.0000,5,Veneto,29,Rovigo,RO
+45.00_12.25,45.00,12.25,0.9700,5,Veneto,29,Rovigo,RO
+45.00_12.50,45.00,12.50,0.3300,5,Veneto,29,Rovigo,RO
+45.25_6.75,45.25,6.75,0.0600,1,Piemonte,1,Torino,TO
+45.25_7.00,45.25,7.00,0.3125,1,Piemonte,1,Torino,TO
+45.25_7.25,45.25,7.25,0.9750,1,Piemonte,1,Torino,TO
+45.25_7.50,45.25,7.50,1.0000,1,Piemonte,1,Torino,TO
+45.25_7.75,45.25,7.75,1.0000,1,Piemonte,1,Torino,TO
+45.25_8.00,45.25,8.00,1.0000,1,Piemonte,1,Torino,TO
+45.25_8.25,45.25,8.25,1.0000,1,Piemonte,2,Vercelli,VC
+45.25_8.50,45.25,8.50,1.0000,1,Piemonte,2,Vercelli,VC
+45.25_8.75,45.25,8.75,1.0000,3,Lombardia,18,Pavia,PV
+45.25_9.00,45.25,9.00,1.0000,3,Lombardia,18,Pavia,PV
+45.25_9.25,45.25,9.25,1.0000,3,Lombardia,18,Pavia,PV
+45.25_9.50,45.25,9.50,1.0000,3,Lombardia,98,Lodi,LO
+45.25_9.75,45.25,9.75,1.0000,3,Lombardia,19,Cremona,CR
+45.25_10.00,45.25,10.00,1.0000,3,Lombardia,19,Cremona,CR
+45.25_10.25,45.25,10.25,1.0000,3,Lombardia,17,Brescia,BS
+45.25_10.50,45.25,10.50,1.0000,3,Lombardia,20,Mantova,MN
+45.25_10.75,45.25,10.75,1.0000,3,Lombardia,20,Mantova,MN
+45.25_11.00,45.25,11.00,1.0000,5,Veneto,23,Verona,VR
+45.25_11.25,45.25,11.25,1.0000,5,Veneto,23,Verona,VR
+45.25_11.50,45.25,11.50,1.0000,5,Veneto,28,Padova,PD
+45.25_11.75,45.25,11.75,1.0000,5,Veneto,28,Padova,PD
+45.25_12.00,45.25,12.00,1.0000,5,Veneto,28,Padova,PD
+45.25_12.25,45.25,12.25,0.7675,5,Veneto,27,Venezia,VE
+45.50_7.00,45.50,7.00,0.3100,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.50_7.25,45.50,7.25,0.9650,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.50_7.50,45.50,7.50,1.0000,1,Piemonte,1,Torino,TO
+45.50_7.75,45.50,7.75,1.0000,1,Piemonte,1,Torino,TO
+45.50_8.00,45.50,8.00,1.0000,1,Piemonte,96,Biella,BI
+45.50_8.25,45.50,8.25,1.0000,1,Piemonte,2,Vercelli,VC
+45.50_8.50,45.50,8.50,1.0000,1,Piemonte,3,Novara,NO
+45.50_8.75,45.50,8.75,1.0000,1,Piemonte,3,Novara,NO
+45.50_9.00,45.50,9.00,1.0000,3,Lombardia,15,Milano,MI
+45.50_9.25,45.50,9.25,1.0000,3,Lombardia,15,Milano,MI
+45.50_9.50,45.50,9.50,1.0000,3,Lombardia,15,Milano,MI
+45.50_9.75,45.50,9.75,1.0000,3,Lombardia,16,Bergamo,BG
+45.50_10.00,45.50,10.00,1.0000,3,Lombardia,17,Brescia,BS
+45.50_10.25,45.50,10.25,1.0000,3,Lombardia,17,Brescia,BS
+45.50_10.50,45.50,10.50,1.0000,3,Lombardia,17,Brescia,BS
+45.50_10.75,45.50,10.75,1.0000,5,Veneto,23,Verona,VR
+45.50_11.00,45.50,11.00,1.0000,5,Veneto,23,Verona,VR
+45.50_11.25,45.50,11.25,1.0000,5,Veneto,23,Verona,VR
+45.50_11.50,45.50,11.50,1.0000,5,Veneto,24,Vicenza,VI
+45.50_11.75,45.50,11.75,1.0000,5,Veneto,28,Padova,PD
+45.50_12.00,45.50,12.00,1.0000,5,Veneto,28,Padova,PD
+45.50_12.25,45.50,12.25,0.9925,5,Veneto,27,Venezia,VE
+45.50_12.50,45.50,12.50,0.6875,5,Veneto,27,Venezia,VE
+45.50_12.75,45.50,12.75,0.3350,5,Veneto,27,Venezia,VE
+45.50_13.00,45.50,13.00,0.0175,5,Veneto,27,Venezia,VE
+45.50_13.75,45.50,13.75,0.0600,6,Friuli-Venezia Giulia,32,Trieste,TS
+45.50_14.00,45.50,14.00,0.0025,6,Friuli-Venezia Giulia,32,Trieste,TS
+45.75_6.75,45.75,6.75,0.1475,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.75_7.00,45.75,7.00,0.8950,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.75_7.25,45.75,7.25,0.9900,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.75_7.50,45.75,7.50,1.0000,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.75_7.75,45.75,7.75,1.0000,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+45.75_8.00,45.75,8.00,1.0000,1,Piemonte,2,Vercelli,VC
+45.75_8.25,45.75,8.25,1.0000,1,Piemonte,2,Vercelli,VC
+45.75_8.50,45.75,8.50,1.0000,1,Piemonte,3,Novara,NO
+45.75_8.75,45.75,8.75,1.0000,3,Lombardia,12,Varese,VA
+45.75_9.00,45.75,9.00,0.9225,3,Lombardia,13,Como,CO
+45.75_9.25,45.75,9.25,1.0000,3,Lombardia,13,Como,CO
+45.75_9.50,45.75,9.50,1.0000,3,Lombardia,16,Bergamo,BG
+45.75_9.75,45.75,9.75,1.0000,3,Lombardia,16,Bergamo,BG
+45.75_10.00,45.75,10.00,1.0000,3,Lombardia,16,Bergamo,BG
+45.75_10.25,45.75,10.25,1.0000,3,Lombardia,17,Brescia,BS
+45.75_10.50,45.75,10.50,1.0000,3,Lombardia,17,Brescia,BS
+45.75_10.75,45.75,10.75,1.0000,3,Lombardia,17,Brescia,BS
+45.75_11.00,45.75,11.00,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+45.75_11.25,45.75,11.25,1.0000,5,Veneto,24,Vicenza,VI
+45.75_11.50,45.75,11.50,1.0000,5,Veneto,24,Vicenza,VI
+45.75_11.75,45.75,11.75,1.0000,5,Veneto,24,Vicenza,VI
+45.75_12.00,45.75,12.00,1.0000,5,Veneto,26,Treviso,TV
+45.75_12.25,45.75,12.25,1.0000,5,Veneto,26,Treviso,TV
+45.75_12.50,45.75,12.50,1.0000,5,Veneto,26,Treviso,TV
+45.75_12.75,45.75,12.75,1.0000,5,Veneto,27,Venezia,VE
+45.75_13.00,45.75,13.00,0.9750,5,Veneto,27,Venezia,VE
+45.75_13.25,45.75,13.25,0.7050,6,Friuli-Venezia Giulia,30,Udine,UD
+45.75_13.50,45.75,13.50,0.5525,6,Friuli-Venezia Giulia,31,Gorizia,GO
+45.75_13.75,45.75,13.75,0.2900,6,Friuli-Venezia Giulia,32,Trieste,TS
+45.75_14.00,45.75,14.00,0.0125,6,Friuli-Venezia Giulia,32,Trieste,TS
+46.00_7.00,46.00,7.00,0.0475,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+46.00_7.25,46.00,7.25,0.0750,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+46.00_7.50,46.00,7.50,0.2950,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+46.00_7.75,46.00,7.75,0.2650,2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO
+46.00_8.00,46.00,8.00,0.6650,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.00_8.25,46.00,8.25,1.0000,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.00_8.50,46.00,8.50,1.0000,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.00_8.75,46.00,8.75,0.8150,3,Lombardia,12,Varese,VA
+46.00_9.00,46.00,9.00,0.3800,3,Lombardia,13,Como,CO
+46.00_9.25,46.00,9.25,1.0000,3,Lombardia,13,Como,CO
+46.00_9.50,46.00,9.50,1.0000,3,Lombardia,97,Lecco,LC
+46.00_9.75,46.00,9.75,1.0000,3,Lombardia,16,Bergamo,BG
+46.00_10.00,46.00,10.00,1.0000,3,Lombardia,16,Bergamo,BG
+46.00_10.25,46.00,10.25,1.0000,3,Lombardia,17,Brescia,BS
+46.00_10.50,46.00,10.50,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.00_10.75,46.00,10.75,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.00_11.00,46.00,11.00,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.00_11.25,46.00,11.25,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.00_11.50,46.00,11.50,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.00_11.75,46.00,11.75,1.0000,5,Veneto,25,Belluno,BL
+46.00_12.00,46.00,12.00,1.0000,5,Veneto,25,Belluno,BL
+46.00_12.25,46.00,12.25,1.0000,5,Veneto,26,Treviso,TV
+46.00_12.50,46.00,12.50,1.0000,6,Friuli-Venezia Giulia,93,Pordenone,PN
+46.00_12.75,46.00,12.75,1.0000,6,Friuli-Venezia Giulia,93,Pordenone,PN
+46.00_13.00,46.00,13.00,1.0000,6,Friuli-Venezia Giulia,30,Udine,UD
+46.00_13.25,46.00,13.25,1.0000,6,Friuli-Venezia Giulia,30,Udine,UD
+46.00_13.50,46.00,13.50,0.7550,6,Friuli-Venezia Giulia,30,Udine,UD
+46.00_13.75,46.00,13.75,0.0125,6,Friuli-Venezia Giulia,31,Gorizia,GO
+46.25_8.00,46.25,8.00,0.0225,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.25_8.25,46.25,8.25,0.8275,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.25_8.50,46.25,8.50,0.4950,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.25_9.00,46.25,9.00,0.0050,3,Lombardia,13,Como,CO
+46.25_9.25,46.25,9.25,0.5750,3,Lombardia,13,Como,CO
+46.25_9.50,46.25,9.50,0.8650,3,Lombardia,14,Sondrio,SO
+46.25_9.75,46.25,9.75,0.8150,3,Lombardia,14,Sondrio,SO
+46.25_10.00,46.25,10.00,0.7350,3,Lombardia,14,Sondrio,SO
+46.25_10.25,46.25,10.25,0.9525,3,Lombardia,14,Sondrio,SO
+46.25_10.50,46.25,10.50,1.0000,3,Lombardia,17,Brescia,BS
+46.25_10.75,46.25,10.75,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.25_11.00,46.25,11.00,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.25_11.25,46.25,11.25,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.25_11.50,46.25,11.50,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.25_11.75,46.25,11.75,1.0000,4,Trentino-Alto Adige/Südtirol,22,Trento,TN
+46.25_12.00,46.25,12.00,1.0000,5,Veneto,25,Belluno,BL
+46.25_12.25,46.25,12.25,1.0000,5,Veneto,25,Belluno,BL
+46.25_12.50,46.25,12.50,1.0000,6,Friuli-Venezia Giulia,93,Pordenone,PN
+46.25_12.75,46.25,12.75,1.0000,6,Friuli-Venezia Giulia,93,Pordenone,PN
+46.25_13.00,46.25,13.00,1.0000,6,Friuli-Venezia Giulia,30,Udine,UD
+46.25_13.25,46.25,13.25,1.0000,6,Friuli-Venezia Giulia,30,Udine,UD
+46.25_13.50,46.25,13.50,0.4525,6,Friuli-Venezia Giulia,30,Udine,UD
+46.25_13.75,46.25,13.75,0.0250,6,Friuli-Venezia Giulia,30,Udine,UD
+46.50_8.25,46.50,8.25,0.0700,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.50_8.50,46.50,8.50,0.1150,1,Piemonte,103,Verbano-Cusio-Ossola,VB
+46.50_9.25,46.50,9.25,0.2050,3,Lombardia,14,Sondrio,SO
+46.50_9.50,46.50,9.50,0.1500,3,Lombardia,14,Sondrio,SO
+46.50_10.00,46.50,10.00,0.1825,3,Lombardia,14,Sondrio,SO
+46.50_10.25,46.50,10.25,0.8300,3,Lombardia,14,Sondrio,SO
+46.50_10.50,46.50,10.50,0.8600,3,Lombardia,14,Sondrio,SO
+46.50_10.75,46.50,10.75,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.50_11.00,46.50,11.00,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.50_11.25,46.50,11.25,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.50_11.50,46.50,11.50,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.50_11.75,46.50,11.75,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.50_12.00,46.50,12.00,1.0000,5,Veneto,25,Belluno,BL
+46.50_12.25,46.50,12.25,1.0000,5,Veneto,25,Belluno,BL
+46.50_12.50,46.50,12.50,1.0000,5,Veneto,25,Belluno,BL
+46.50_12.75,46.50,12.75,0.9900,6,Friuli-Venezia Giulia,30,Udine,UD
+46.50_13.00,46.50,13.00,0.9100,6,Friuli-Venezia Giulia,30,Udine,UD
+46.50_13.25,46.50,13.25,0.7750,6,Friuli-Venezia Giulia,30,Udine,UD
+46.50_13.50,46.50,13.50,0.6600,6,Friuli-Venezia Giulia,30,Udine,UD
+46.50_13.75,46.50,13.75,0.1125,6,Friuli-Venezia Giulia,30,Udine,UD
+46.75_10.25,46.75,10.25,0.0025,3,Lombardia,14,Sondrio,SO
+46.75_10.50,46.75,10.50,0.7200,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_10.75,46.75,10.75,0.7750,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_11.00,46.75,11.00,0.6900,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_11.25,46.75,11.25,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_11.50,46.75,11.50,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_11.75,46.75,11.75,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_12.00,46.75,12.00,1.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_12.25,46.75,12.25,0.8650,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+46.75_12.50,46.75,12.50,0.2150,5,Veneto,25,Belluno,BL
+46.75_12.75,46.75,12.75,0.0700,5,Veneto,25,Belluno,BL
+47.00_10.75,47.00,10.75,0.0000,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_11.00,47.00,11.00,0.0200,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_11.25,47.00,11.25,0.3825,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_11.50,47.00,11.50,0.4650,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_11.75,47.00,11.75,0.4625,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_12.00,47.00,12.00,0.6925,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ
+47.00_12.25,47.00,12.25,0.1700,4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ

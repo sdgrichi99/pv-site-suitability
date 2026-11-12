@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: grid_points
+    description: >
+      Griglia a 0,25 gradi sul territorio italiano (terraferma e isole), costruita dai confini
+      provinciali ISTAT al 1 gennaio 2026 con scripts/build_grid.py. Metodo in docs/griglia_meteo_metodo.pdf.
+    columns:
+      - name: grid_id
+        data_tests:
+          - not_null
+          - unique
