@@ -3,72 +3,87 @@
 # I valori {{ $NOME }} vengono letti dall'ambiente al momento del "prefect deploy"
 # (nella pipeline cd.yml arrivano dai segreti di GitHub).
 # Il blocco Secret "github-access-token" va creato una volta in Prefect Cloud (repo privato).
+#
+# Due deployment dallo stesso flow:
+#   ducklake-monthly-prd  una volta al mese: dati meteo orari del mese precedente e dbt build
+#   ducklake-pipeline-dev nessuno schedule: si avvia a mano
+# Lo storico (backfill) si carica da riga di comando, vedi orchestrate/extract/weather.py.
 name: duck_db_trial
 
 build: null
 push: null
 
+definitions:
+  pull_main: &pull_main
+    - prefect.deployments.steps.git_clone:
+        repository: https://github.com/sdgrichi99/duck_db_trial.git
+        branch: main
+        access_token: "{{ prefect.blocks.secret.github-access-token }}"
+
+  pull_dev: &pull_dev
+    - prefect.deployments.steps.git_clone:
+        repository: https://github.com/sdgrichi99/duck_db_trial.git
+        branch: dev
+        access_token: "{{ prefect.blocks.secret.github-access-token }}"
+
+  work_pool_prd: &work_pool_prd
+    name: managed-pool
+    job_variables:
+      # TODO: fissare le versioni con l'output di "pip freeze" (oggi solo dbt e' fissato)
+      pip_packages:
+        - "dbt-core==1.12.6"
+        - "dbt-duckdb==1.11.0"
+        - "duckdb>=1.1.0"
+        - "boto3"
+        - "requests>=2.31.0"
+        - "pendulum>=3.0.0"
+      env:
+        DBT_TARGET: prd
+        NEON_URL_PRD: "{{ $NEON_URL_PRD }}"
+        TIGRIS_BUCKET_PRD: "{{ $TIGRIS_BUCKET_PRD }}"
+        AWS_ACCESS_KEY_ID_PRD: "{{ $AWS_ACCESS_KEY_ID_PRD }}"
+        AWS_SECRET_ACCESS_KEY_PRD: "{{ $AWS_SECRET_ACCESS_KEY_PRD }}"
+        AWS_ENDPOINT_URL_S3_PRD: "{{ $AWS_ENDPOINT_URL_S3_PRD }}"
+        GMAIL_USER: "{{ $GMAIL_USER }}"
+        GMAIL_APP_PASSWORD: "{{ $GMAIL_APP_PASSWORD }}"
+
+  work_pool_dev: &work_pool_dev
+    name: managed-pool
+    job_variables:
+      pip_packages:
+        - "dbt-core==1.12.6"
+        - "dbt-duckdb==1.11.0"
+        - "duckdb>=1.1.0"
+        - "boto3"
+        - "requests>=2.31.0"
+        - "pendulum>=3.0.0"
+      env:
+        DBT_TARGET: dev
+        NEON_URL_DEV: "{{ $NEON_URL_DEV }}"
+        TIGRIS_BUCKET_DEV: "{{ $TIGRIS_BUCKET_DEV }}"
+        AWS_ACCESS_KEY_ID: "{{ $AWS_ACCESS_KEY_ID }}"
+        AWS_SECRET_ACCESS_KEY: "{{ $AWS_SECRET_ACCESS_KEY }}"
+        AWS_ENDPOINT_URL_S3: "{{ $AWS_ENDPOINT_URL_S3 }}"
+        GMAIL_USER: "{{ $GMAIL_USER }}"
+        GMAIL_APP_PASSWORD: "{{ $GMAIL_APP_PASSWORD }}"
+
 deployments:
-  # ---------------------------------------------------------------- produzione
-  - name: ducklake-pipeline-prd
-    description: "dbt build su target prd, codice dal ramo main. Schedulato."
+  # ------------------------------------------------------------ produzione, mensile
+  - name: ducklake-monthly-prd
+    description: "Dati meteo orari del mese precedente sulla griglia a 0,25 gradi: estrazione e dbt build. Codice dal ramo main."
     entrypoint: orchestrate/main_flow.py:ducklake_flow
-    pull:
-      - prefect.deployments.steps.git_clone:
-          repository: https://github.com/sdgrichi99/duck_db_trial.git
-          branch: main
-          access_token: "{{ prefect.blocks.secret.github-access-token }}"
-    work_pool:
-      name: managed-pool
-      job_variables:
-        # TODO: fissare le versioni con l'output di "pip freeze" (oggi solo dbt e' fissato)
-        pip_packages:
-          - "dbt-core==1.12.6"
-          - "dbt-duckdb==1.11.0"
-          - "duckdb>=1.1.0"
-          - "boto3"
-          - "requests>=2.31.0"
-          - "pendulum>=3.0.0"
-        env:
-          DBT_TARGET: prd
-          NEON_URL_PRD: "{{ $NEON_URL_PRD }}"
-          TIGRIS_BUCKET_PRD: "{{ $TIGRIS_BUCKET_PRD }}"
-          AWS_ACCESS_KEY_ID_PRD: "{{ $AWS_ACCESS_KEY_ID_PRD }}"
-          AWS_SECRET_ACCESS_KEY_PRD: "{{ $AWS_SECRET_ACCESS_KEY_PRD }}"
-          AWS_ENDPOINT_URL_S3_PRD: "{{ $AWS_ENDPOINT_URL_S3_PRD }}"
-          GMAIL_USER: "{{ $GMAIL_USER }}"
-          GMAIL_APP_PASSWORD: "{{ $GMAIL_APP_PASSWORD }}"
+    pull: *pull_main
+    work_pool: *work_pool_prd
     schedules:
+      # L'8 del mese: l'archivio ERA5 ha un ritardo di circa 5 giorni sui dati piu' recenti.
       # Spento finche' un run manuale non va a buon fine: poi impostare active: true
-      - cron: "0 6 * * *"
+      - cron: "0 7 8 * *"
         timezone: Europe/Rome
         active: false
 
-  # ----------------------------------------------------------------------- dev
+  # ----------------------------------------------------------------------------- dev
   - name: ducklake-pipeline-dev
-    description: "dbt build su target dev, codice dal ramo dev. Nessuno schedule: si avvia a mano."
+    description: "Estrazione e tutti i modelli su target dev, codice dal ramo dev. Nessuno schedule: si avvia a mano."
     entrypoint: orchestrate/main_flow.py:ducklake_flow
-    pull:
-      - prefect.deployments.steps.git_clone:
-          repository: https://github.com/sdgrichi99/duck_db_trial.git
-          branch: dev
-          access_token: "{{ prefect.blocks.secret.github-access-token }}"
-    work_pool:
-      name: managed-pool
-      job_variables:
-        pip_packages:
-          - "dbt-core==1.12.6"
-          - "dbt-duckdb==1.11.0"
-          - "duckdb>=1.1.0"
-          - "boto3"
-          - "requests>=2.31.0"
-          - "pendulum>=3.0.0"
-        env:
-          DBT_TARGET: dev
-          NEON_URL_DEV: "{{ $NEON_URL_DEV }}"
-          TIGRIS_BUCKET_DEV: "{{ $TIGRIS_BUCKET_DEV }}"
-          AWS_ACCESS_KEY_ID: "{{ $AWS_ACCESS_KEY_ID }}"
-          AWS_SECRET_ACCESS_KEY: "{{ $AWS_SECRET_ACCESS_KEY }}"
-          AWS_ENDPOINT_URL_S3: "{{ $AWS_ENDPOINT_URL_S3 }}"
-          GMAIL_USER: "{{ $GMAIL_USER }}"
-          GMAIL_APP_PASSWORD: "{{ $GMAIL_APP_PASSWORD }}"
+    pull: *pull_dev
+    work_pool: *work_pool_dev
