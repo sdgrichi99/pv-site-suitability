@@ -112,6 +112,11 @@ jobs:
       - name: Create temporary Neon database and Tigris prefix
         run: python scripts/ci_resources.py create --pr "$PR_NUM" --run "$RUN_TAG"
 
+      # I modelli leggono i file del landing: si scrivono nel prefisso temporaneo con lo stesso
+      # codice di produzione (chiama le api meteo: solo 10 punti della griglia, mese precedente)
+      - name: Land weather data in temporary prefix
+        run: python -m orchestrate.extract.weather --target dev --limit-points 10
+
       - name: dbt build
         run: dbt build --target dev --profiles-dir . --fail-fast
 
