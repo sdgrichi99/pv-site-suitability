@@ -1,0 +1,2 @@
+# Strumenti di sviluppo: servono in locale e nella CI, non dove gira la pipeline.
+sqlfluff==4.5.0

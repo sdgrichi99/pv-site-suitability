@@ -73,9 +73,33 @@ jobs:
           fi
           echo "ok: tutti i modelli sql hanno il rispettivo file yml"
 
+  # Stile del codice SQL: regole in .sqlfluff. Non apre connessioni e non usa segreti.
+  sql-lint:
+    name: Stile SQL (sqlfluff)
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install sqlfluff
+        run: pip install -r requirements-dev.txt
+
+      - name: sqlfluff lint
+        run: sqlfluff lint models tests --format github-annotation-native --annotation-level failure
+
   dbt-ci-build:
     name: dbt build su ambiente temporaneo
-    needs: checks
+    needs: [checks, sql-lint]
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     timeout-minutes: 30

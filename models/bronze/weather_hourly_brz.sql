@@ -33,17 +33,17 @@ select
     current_timestamp as _loaded_at
 from read_json(
     {% if is_incremental() -%}
-    [
-        {%- for month in weather_months() %}
-        '{{ landing_path("weather_hourly") }}/month={{ month }}/*.json.gz'{{ "," if not loop.last }}
-        {%- endfor %}
-    ],
+        [
+            {%- for month in weather_months() %}
+                '{{ landing_path("weather_hourly") }}/month={{ month }}/*.json.gz'{{ "," if not loop.last }}
+            {%- endfor %}
+        ],
     {%- else -%}
-    '{{ landing_path("weather_hourly") }}/*/*.json.gz',
+        '{{ landing_path("weather_hourly") }}/*/*.json.gz',
     {%- endif %}
     format = 'array',
     filename = true,
     hive_partitioning = true,
-    hive_types = {'month': varchar},
+    hive_types = { 'month': varchar },
     union_by_name = true
 )

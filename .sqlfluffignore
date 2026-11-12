@@ -1,0 +1,9 @@
+target/
+dbt_packages/
+logs/
+venv/
+.venv/
+prod_artifacts/
+trial_models/
+# i file di sole macro, risolto il jinja, sono vuoti: non c'e' nulla da controllare
+macros/

@@ -1,4 +1,3 @@
-
 {{ config(
     materialized='incremental',
     incremental_strategy='delete+insert',
@@ -26,6 +25,6 @@ select
     current_timestamp as _loaded_at
 from {{ ref('weather_hourly_slv') }}
 {% if is_incremental() %}
-where month_key in {{ weather_months_sql() }}
+    where month_key in {{ weather_months_sql() }}
 {% endif %}
 group by grid_id, observation_date, month_key

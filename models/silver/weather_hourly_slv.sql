@@ -31,8 +31,9 @@ select
     cast(sunshine_duration as double) as sunshine_s,
     current_timestamp as _loaded_at
 from {{ ref('weather_hourly_brz') }}
-where observation_time is not null
-  and temperature_2m is not null
-{% if is_incremental() %}
-  and month_key in {{ weather_months_sql() }}
-{% endif %}
+where
+    observation_time is not null
+    and temperature_2m is not null
+    {% if is_incremental() %}
+        and month_key in {{ weather_months_sql() }}
+    {% endif %}

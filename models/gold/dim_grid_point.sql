@@ -9,17 +9,17 @@ with elevation as (
 )
 
 select
-    g.grid_id,
-    g.latitude,
-    g.longitude,
-    e.elevation_m,
-    g.land_fraction,
-    g.cod_reg,
-    g.den_reg,
-    g.cod_prov,
-    g.den_prov,
-    g.sigla_prov,
+    grid_points.grid_id,
+    grid_points.latitude,
+    grid_points.longitude,
+    elv.elevation_m,
+    grid_points.land_fraction,
+    grid_points.cod_reg,
+    grid_points.den_reg,
+    grid_points.cod_prov,
+    grid_points.den_prov,
+    grid_points.sigla_prov,
     current_timestamp as _loaded_at
-from {{ ref('grid_points') }} as g
-left join elevation as e
-    on g.grid_id = e.grid_id
+from {{ ref('grid_points') }} as grid_points
+left join elevation as elv
+    on grid_points.grid_id = elv.grid_id

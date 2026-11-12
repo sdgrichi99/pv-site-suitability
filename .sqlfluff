@@ -1,0 +1,64 @@
+# Controllo dello stile SQL di modelli e test.
+#   sqlfluff lint models tests     segnala le violazioni
+#   sqlfluff fix models tests      corregge quelle sistemabili in automatico
+
+[sqlfluff]
+dialect = duckdb
+templater = jinja
+max_line_length = 120
+# ST06: ordine imposto alle colonne della select
+# AM04: divieto di select *
+exclude_rules = ST06, AM04
+
+[sqlfluff:indentation]
+indent_unit = space
+tab_space_size = 4
+
+# Il templater jinja non apre dbt: ref, source, var, config e is_incremental sono simulati
+# da sqlfluff (is_incremental vale sempre true). Le macro del progetto usano env_var e target,
+# che qui non esistono: per il controllo dello stile bastano le versioni finte qui sotto.
+[sqlfluff:templater:jinja]
+apply_dbt_builtins = True
+
+[sqlfluff:templater:jinja:macros]
+landing_path = {% macro landing_path(source) %}s3://bucket/landing/{{ source }}{% endmacro %}
+weather_months = {% macro weather_months() %}{{ return(['2026-09']) }}{% endmacro %}
+weather_months_sql = {% macro weather_months_sql() %}('2026-09'){% endmacro %}
+
+# --- Tutto il codice in minuscolo ---
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower
+
+# --- Alias ---
+# sempre con "as" esplicito, sia per le tabelle sia per le colonne
+[sqlfluff:rules:aliasing.table]
+aliasing = explicit
+
+[sqlfluff:rules:aliasing.column]
+aliasing = explicit
+
+# alias di tabella lunghi almeno 3 caratteri
+[sqlfluff:rules:aliasing.length]
+min_alias_length = 3
+
+# --- Riferimenti alle colonne ---
+# Una sola tabella nella select: colonne senza prefisso (RF03).
+# Piu' tabelle: ogni colonna con il prefisso della tabella da cui arriva (RF02, attiva di suo).
+[sqlfluff:rules:references.consistent]
+single_table_references = unqualified
+
+# "month" resta tra virgolette: e' la colonna di partizione letta dal percorso dei file
+[sqlfluff:rules:references.quoting]
+ignore_words = month
