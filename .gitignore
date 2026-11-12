@@ -12,3 +12,5 @@ export_to_parquet.sql
 prod_artifacts/
 .user.yml
 docs
+__pycache__/
+*.pyc
