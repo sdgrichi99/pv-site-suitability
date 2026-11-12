@@ -2,7 +2,7 @@
   Bronze del meteo orario: una riga per punto della griglia e ora (UTC), cosi' come arriva dall'API.
   Legge i file in landing/weather_hourly/month=YYYY-MM/ e li appiattisce.
 
-  Incrementale per mese: a ogni esecuzione sostituisce solo i mesi indicati da weather_months()
+  Incrementale per mese: a ogni esecuzione sostituisce solo i mesi indicati da load_months()
   (di norma il mese precedente). Alla prima esecuzione o con --full-refresh rilegge tutto il landing.
 #}
 {{ config(
@@ -34,7 +34,7 @@ select
 from read_json(
     {% if is_incremental() -%}
         [
-            {%- for month in weather_months() %}
+            {%- for month in load_months() %}
                 '{{ landing_path("weather_hourly") }}/month={{ month }}/*.json.gz'{{ "," if not loop.last }}
             {%- endfor %}
         ],

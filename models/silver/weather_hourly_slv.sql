@@ -35,5 +35,5 @@ where
     observation_time is not null
     and temperature_2m is not null
     {% if is_incremental() %}
-        and month_key in {{ weather_months_sql() }}
+        and month_key in {{ load_months_sql() }}
     {% endif %}

@@ -146,7 +146,7 @@ def run_dbt(select: Optional[str] = None, months: Optional[List[str]] = None, fu
         # la selezione puo' contenere piu' argomenti separati da spazi (unione)
         command += ["--select", *shlex.split(select)]
     if months:
-        # mesi da caricare nei modelli incrementali (vedi macros/weather_months.sql)
+        # mesi da caricare nei modelli incrementali (vedi macros/load_months.sql)
         command += ["--vars", json.dumps({"months": list(months)})]
     if full_refresh:
         command.append("--full-refresh")

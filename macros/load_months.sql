@@ -1,4 +1,4 @@
-{% macro weather_months() %}
+{% macro load_months() %}
   {% set months = var('months', none) %}
   {% if months is none %}
     {% set first_of_month = modules.datetime.date.today().replace(day=1) %}
@@ -12,6 +12,6 @@
 {% endmacro %}
 
 {# Elenco dei mesi come lista SQL: ('2026-09', '2026-10') #}
-{% macro weather_months_sql() -%}
-  ({%- for month in weather_months() -%}'{{ month }}'{{ ", " if not loop.last }}{%- endfor -%})
+{% macro load_months_sql() -%}
+  ({%- for month in load_months() -%}'{{ month }}'{{ ", " if not loop.last }}{%- endfor -%})
 {%- endmacro %}

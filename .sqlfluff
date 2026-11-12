@@ -22,8 +22,8 @@ apply_dbt_builtins = True
 
 [sqlfluff:templater:jinja:macros]
 landing_path = {% macro landing_path(source) %}s3://bucket/landing/{{ source }}{% endmacro %}
-weather_months = {% macro weather_months() %}{{ return(['2026-09']) }}{% endmacro %}
-weather_months_sql = {% macro weather_months_sql() %}('2026-09'){% endmacro %}
+load_months = {% macro load_months() %}{{ return(['2026-09']) }}{% endmacro %}
+load_months_sql = {% macro load_months_sql() %}('2026-09'){% endmacro %}
 
 # --- Tutto il codice in minuscolo ---
 [sqlfluff:rules:capitalisation.keywords]
