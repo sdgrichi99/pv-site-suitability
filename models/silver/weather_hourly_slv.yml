@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: weather_hourly_slv
+    description: >
+      Meteo orario pulito: una riga per punto della griglia e ora UTC. Fonte Open-Meteo, modello ERA5.
+    columns:
+      - name: grid_id
+        description: Punto della griglia (chiave di dim_grid_point).
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('grid_points')
+                field: grid_id
+      - name: observation_ts
+        description: Ora dell'osservazione in UTC. Per le grandezze cumulate o medie indica la fine dell'ora a cui si riferiscono.
+        data_tests:
+          - not_null
+      - name: observation_date
+        description: Data UTC dell'osservazione.
+      - name: month_key
+        description: Mese di riferimento (YYYY-MM).
+      - name: temperature_c
+        description: Temperatura dell'aria a 2 metri, in gradi Celsius.
+      - name: relative_humidity_pct
+        description: Umidita' relativa a 2 metri, in percentuale.
+      - name: precipitation_mm
+        description: Precipitazione dell'ora precedente, in millimetri.
+      - name: wind_speed_kmh
+        description: Velocita' del vento a 10 metri, in km/h.
+      - name: cloud_cover_pct
+        description: Copertura nuvolosa totale, in percentuale.
+      - name: ghi_wm2
+        description: Irraggiamento globale sul piano orizzontale (GHI), media dell'ora precedente, in W/m2.
+      - name: direct_wm2
+        description: Irraggiamento diretto sul piano orizzontale, media dell'ora precedente, in W/m2.
+      - name: diffuse_wm2
+        description: Irraggiamento diffuso sul piano orizzontale, media dell'ora precedente, in W/m2.
+      - name: dni_wm2
+        description: Irraggiamento diretto normale (DNI), media dell'ora precedente, in W/m2.
+      - name: sunshine_s
+        description: Secondi di soleggiamento nell'ora precedente.
+      - name: _loaded_at
+        description: Momento del caricamento; usato dal registro audit.model_load_log.

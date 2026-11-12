@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: fct_weather_daily
+    description: >
+      Meteo giornaliero (giorno UTC) per punto della griglia: temperature, precipitazione, vento,
+      nuvolosita' ed energia solare. I dati orari sono in weather_hourly_slv.
+    columns:
+      - name: grid_id
+        description: Punto della griglia (chiave di dim_grid_point).
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_grid_point')
+                field: grid_id
+      - name: weather_date
+        description: Giorno UTC.
+        data_tests:
+          - not_null
+      - name: month_key
+        description: Mese di riferimento (YYYY-MM).
+      - name: temp_min_c
+        description: Temperatura minima oraria del giorno, in gradi Celsius.
+      - name: temp_max_c
+        description: Temperatura massima oraria del giorno, in gradi Celsius.
+      - name: temp_avg_c
+        description: Media delle temperature orarie, in gradi Celsius.
+      - name: relative_humidity_avg_pct
+        description: Umidita' relativa media, in percentuale.
+      - name: precipitation_mm
+        description: Precipitazione totale del giorno, in millimetri.
+      - name: wind_max_kmh
+        description: Massima velocita' oraria del vento a 10 metri, in km/h.
+      - name: cloud_cover_avg_pct
+        description: Copertura nuvolosa media, in percentuale.
+      - name: ghi_kwh_m2
+        description: Energia solare globale sul piano orizzontale nel giorno, in kWh/m2.
+      - name: direct_kwh_m2
+        description: Energia solare diretta sul piano orizzontale nel giorno, in kWh/m2.
+      - name: diffuse_kwh_m2
+        description: Energia solare diffusa sul piano orizzontale nel giorno, in kWh/m2.
+      - name: dni_kwh_m2
+        description: Energia solare diretta normale nel giorno, in kWh/m2.
+      - name: sunshine_hours
+        description: Ore di soleggiamento nel giorno.
+      - name: hours_count
+        description: Numero di ore con dati nel giorno (24 se il giorno e' completo).
+      - name: _loaded_at
+        description: Momento del caricamento; usato dal registro audit.model_load_log.

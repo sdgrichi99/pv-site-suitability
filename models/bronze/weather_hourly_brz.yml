@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: weather_hourly_brz
+    description: >
+      Dati meteo orari grezzi di Open-Meteo (modello ERA5, griglia a 0,25 gradi): una riga per punto
+      della griglia e ora UTC. Nomi e unita' delle colonne sono quelli dell'API.
+    columns:
+      - name: grid_id
+        description: Punto della griglia (vedi il seed grid_points).
+        data_tests:
+          - not_null
+      - name: month_key
+        description: Mese di riferimento dei dati (YYYY-MM), dalla cartella del landing.
+        data_tests:
+          - not_null
+      - name: observation_time
+        description: Ora dell'osservazione in UTC, come testo ISO 8601.
+        data_tests:
+          - not_null
+      - name: elevation
+        description: Quota della cella secondo l'API, in metri.
+      - name: _source_file
+        description: File del landing da cui proviene la riga.
+      - name: _loaded_at
+        description: Momento del caricamento.

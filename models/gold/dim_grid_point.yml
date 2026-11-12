@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_grid_point
+    description: >
+      Punti della griglia a 0,25 gradi che coprono il territorio italiano (terraferma e isole).
+      Ogni punto e' il centro di una cella quadrata di 0,25 gradi di lato.
+    columns:
+      - name: grid_id
+        description: Identificativo del punto, latitudine e longitudine unite da un trattino basso.
+        data_tests:
+          - not_null
+          - unique
+      - name: latitude
+        description: Latitudine del punto in gradi decimali (WGS 84).
+      - name: longitude
+        description: Longitudine del punto in gradi decimali (WGS 84).
+      - name: elevation_m
+        description: Quota della cella secondo Open-Meteo, in metri. Vuota se il punto non ha ancora dati meteo.
+      - name: land_fraction
+        description: Quota della cella che ricade in territorio italiano, da 0 a 1.
+      - name: cod_reg
+        description: Codice ISTAT della regione della provincia prevalente.
+      - name: den_reg
+        description: Nome della regione.
+      - name: cod_prov
+        description: Codice ISTAT della provincia prevalente nella cella.
+      - name: den_prov
+        description: Nome della provincia o citta' metropolitana prevalente.
+      - name: sigla_prov
+        description: Sigla della provincia prevalente.
+      - name: _loaded_at
+        description: Momento del caricamento; usato dal registro audit.model_load_log.
