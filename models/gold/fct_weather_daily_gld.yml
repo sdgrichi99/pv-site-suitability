@@ -1,18 +1,18 @@
 version: 2
 
 models:
-  - name: fct_weather_daily
+  - name: fct_weather_daily_gld
     description: >
       Meteo giornaliero (giorno UTC) per punto della griglia: temperature, precipitazione, vento,
       nuvolosita' ed energia solare. I dati orari sono in weather_hourly_slv.
     columns:
       - name: grid_id
-        description: Punto della griglia (chiave di dim_grid_point).
+        description: Punto della griglia (chiave di dim_grid_point_gld).
         data_tests:
           - not_null
           - relationships:
               arguments:
-                to: ref('dim_grid_point')
+                to: ref('dim_grid_point_gld')
                 field: grid_id
       - name: weather_date
         description: Giorno UTC.

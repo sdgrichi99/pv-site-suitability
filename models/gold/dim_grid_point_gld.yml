@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_grid_point
+  - name: dim_grid_point_gld
     description: >
       Punti della griglia a 0,25 gradi che coprono il territorio italiano (terraferma e isole).
       Ogni punto e' il centro di una cella quadrata di 0,25 gradi di lato.

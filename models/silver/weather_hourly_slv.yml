@@ -6,7 +6,7 @@ models:
       Meteo orario pulito: una riga per punto della griglia e ora UTC. Fonte Open-Meteo, modello ERA5.
     columns:
       - name: grid_id
-        description: Punto della griglia (chiave di dim_grid_point).
+        description: Punto della griglia (chiave di dim_grid_point_gld).
         data_tests:
           - not_null
           - relationships:
