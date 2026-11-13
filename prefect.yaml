@@ -16,13 +16,13 @@ push: null
 definitions:
   pull_main: &pull_main
     - prefect.deployments.steps.git_clone:
-        repository: https://github.com/sdgrichi99/duck_db_trial.git
+        repository: https://github.com/sdgrichi99/pv-site-suitability.git
         branch: main
         access_token: "{{ prefect.blocks.secret.github-access-token }}"
 
   pull_dev: &pull_dev
     - prefect.deployments.steps.git_clone:
-        repository: https://github.com/sdgrichi99/duck_db_trial.git
+        repository: https://github.com/sdgrichi99/pv-site-suitability.git
         branch: dev
         access_token: "{{ prefect.blocks.secret.github-access-token }}"
 
