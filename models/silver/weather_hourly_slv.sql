@@ -1,12 +1,3 @@
-{#
-  Silver del meteo orario: una riga per punto della griglia e ora (UTC), con tipi e nomi puliti.
-  Scarta le ore senza dati (l'archivio ERA5 ha un ritardo di circa 5 giorni sui dati piu' recenti).
-
-  Le grandezze di irraggiamento sono la media sull'ora precedente, in W/m2; precipitazione e
-  durata del soleggiamento sono la somma sull'ora precedente.
-
-  Incrementale per mese, come il bronze.
-#}
 {{ config(
     materialized='incremental',
     incremental_strategy='delete+insert',
