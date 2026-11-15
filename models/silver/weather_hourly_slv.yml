@@ -29,8 +29,8 @@ models:
         description: Precipitazione dell'ora precedente, in millimetri.
       - name: wind_speed_kmh
         description: Velocita' del vento a 10 metri, in km/h.
-      - name: cloud_cover_pct
-        description: Copertura nuvolosa totale, in percentuale.
+      - name: wind_speed_100m_kmh
+        description: Velocita' del vento a 100 metri (quota mozzo delle turbine), in km/h.
       - name: ghi_wm2
         description: Irraggiamento globale sul piano orizzontale (GHI), media dell'ora precedente, in W/m2.
       - name: direct_wm2

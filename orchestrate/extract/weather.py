@@ -18,7 +18,7 @@ HOURLY_VARIABLES = (
     "relative_humidity_2m",
     "precipitation",
     "wind_speed_10m",
-    "cloud_cover",
+    "wind_speed_100m",
     "shortwave_radiation",
     "direct_radiation",
     "diffuse_radiation",

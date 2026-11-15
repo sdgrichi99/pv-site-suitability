@@ -14,7 +14,7 @@ select
     cast(relative_humidity_2m as double) as relative_humidity_pct,
     cast(precipitation as double) as precipitation_mm,
     cast(wind_speed_10m as double) as wind_speed_kmh,
-    cast(cloud_cover as double) as cloud_cover_pct,
+    cast(wind_speed_100m as double) as wind_speed_100m_kmh,
     cast(shortwave_radiation as double) as ghi_wm2,
     cast(direct_radiation as double) as direct_wm2,
     cast(diffuse_radiation as double) as diffuse_wm2,

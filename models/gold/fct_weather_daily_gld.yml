@@ -3,8 +3,8 @@ version: 2
 models:
   - name: fct_weather_daily_gld
     description: >
-      Meteo giornaliero (giorno UTC) per punto della griglia: temperature, precipitazione, vento,
-      nuvolosita' ed energia solare. I dati orari sono in weather_hourly_slv.
+      Meteo giornaliero (giorno UTC) per punto della griglia: temperature, precipitazione, vento
+      (a 10 e a 100 metri) ed energia solare. I dati orari sono in weather_hourly_slv.
     columns:
       - name: grid_id
         description: Punto della griglia (chiave di dim_grid_point_gld).
@@ -32,8 +32,10 @@ models:
         description: Precipitazione totale del giorno, in millimetri.
       - name: wind_max_kmh
         description: Massima velocita' oraria del vento a 10 metri, in km/h.
-      - name: cloud_cover_avg_pct
-        description: Copertura nuvolosa media, in percentuale.
+      - name: wind_100m_avg_kmh
+        description: Media delle velocita' orarie del vento a 100 metri, in km/h.
+      - name: wind_100m_max_kmh
+        description: Massima velocita' oraria del vento a 100 metri, in km/h.
       - name: ghi_kwh_m2
         description: Energia solare globale sul piano orizzontale nel giorno, in kWh/m2.
       - name: direct_kwh_m2

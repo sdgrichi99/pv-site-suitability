@@ -34,6 +34,10 @@ flags:
 # dbt --defer di leggere dal catalogo di produzione (lakehouse_prd) in una sessione dev.
 models:
   duck_db_trial:
+    # modelli incrementali: se le colonne del modello cambiano, la tabella esistente viene
+    # allineata (colonne nuove aggiunte, colonne tolte eliminate con i loro dati). Le righe gia'
+    # caricate restano a NULL nelle colonne nuove finche' il mese non viene ricaricato.
+    +on_schema_change: sync_all_columns
     bronze:
       +database: "lakehouse_{{ target.name }}"
       +materialized: table

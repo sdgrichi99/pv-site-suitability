@@ -16,7 +16,7 @@ select
     unnest(hourly.relative_humidity_2m) as relative_humidity_2m,
     unnest(hourly.precipitation) as precipitation,
     unnest(hourly.wind_speed_10m) as wind_speed_10m,
-    unnest(hourly.cloud_cover) as cloud_cover,
+    unnest(hourly.wind_speed_100m) as wind_speed_100m,
     unnest(hourly.shortwave_radiation) as shortwave_radiation,
     unnest(hourly.direct_radiation) as direct_radiation,
     unnest(hourly.diffuse_radiation) as diffuse_radiation,
