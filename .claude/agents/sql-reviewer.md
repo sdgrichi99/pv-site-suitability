@@ -1,7 +1,7 @@
 ---
 name: sql-reviewer
-description: Usalo per scrivere o rivedere SQL dentro models/, macros/ o tests/ (dbt + DuckDB/DuckLake): modelli incrementali, macro, seed, conformità a sqlfluff, convenzioni bronze/silver/gold. Invocalo quando si tocca un file .sql del progetto o si discute una modifica a un modello dbt.
-tools: Read, Grep, Glob, Bash
+description: "Usalo per scrivere o rivedere SQL dentro models/, macros/ o tests/ (dbt + DuckDB/DuckLake): modelli incrementali, macro, seed, conformità a sqlfluff, convenzioni bronze/silver/gold. Invocalo quando si tocca un file .sql del progetto o si discute una modifica a un modello dbt."
+tools: [Read, Grep, Glob, Bash]
 model: sonnet
 ---
 
